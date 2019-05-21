@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "QiYu’s Blog"
-theme = "hugo-grapes-master"
+theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
