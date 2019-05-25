@@ -21,8 +21,7 @@ title<-web %>% html_nodes("div.news_li h2") %>% html_text()
 write.csv(title,file="title-of-news") 
 ```
 ### 文档展示
-![](/Users/qiyu/Desktop/1.png)
 
-![](/Users/qiyu/Desktop/2.png)
 
-![](/Users/qiyu/Desktop/3.png)
+
+
