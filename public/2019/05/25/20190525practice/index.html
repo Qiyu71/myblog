@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>20190525爬虫练习2 - QiYu’s Blog</title>
+<meta property="og:title" content="20190525爬虫练习2 - QiYu’s Blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/0CCFD597BFD09B6CCF69FE89AA167218.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/contact/">Contact</a></li>
+    
+    <li><a href="https://weibo.com/u/3597652082?nick=%e5%a4%8f%e4%b8%8d%e6%83%9f%e6%a0%8e">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">20190525爬虫练习2</h1>
+
+    
+    <span class="article-date">2019-05-25</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div class="section level1">
+<h1>爬取澎湃新闻</h1>
+<div class="section level3">
+<h3>目标</h3>
+<p>获取澎湃新闻精选列表中的所有标题,并生成文件
+### 网址
+<a href="https://www.thepaper.cn" class="uri">https://www.thepaper.cn</a></p>
+</div>
+<div class="section level3">
+<h3>过程如下</h3>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;rvest&#39;:
+##   method            from
+##   read_xml.response xml2</code></pre>
+<pre class="r"><code>url&lt;-&#39;https://www.thepaper.cn&#39;
+web&lt;-read_html(url,encoding=&quot;utf-8&quot;)
+title&lt;-web %&gt;% html_nodes(&quot;div.news_li h2&quot;) %&gt;% html_text()
+write.csv(title,file=&quot;title-of-news&quot;) </code></pre>
+</div>
+<div class="section level3">
+<h3>文档展示</h3>
+<p><img src="https://img.alicdn.com/imgextra/i4/3383487940/O1CN01W0dxeS28WZIIcOKQY_!!3383487940.png" /></p>
+<p><img src="https://img.alicdn.com/imgextra/i3/3383487940/O1CN01xwgr4628WZIFsCK1R_!!3383487940.png" /></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/3383487940/O1CN01RCwfMm28WZIHH4vvB_!!3383487940.png" /></p>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

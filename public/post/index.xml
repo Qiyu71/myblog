@@ -6,10 +6,31 @@
     <description>Recent content in Posts on QiYu’s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>20190525爬虫练习2</title>
+      <link>/2019/05/25/20190525practice/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/25/20190525practice/</guid>
+      <description> 爬取澎湃新闻 目标 获取澎湃新闻精选列表中的所有标题,并生成文件 ### 网址 https://www.thepaper.cn
+ 过程如下 library(rvest) ## 载入需要的程辑包：xml2 ## Registered S3 method overwritten by &amp;#39;rvest&amp;#39;: ## method from ## read_xml.response xml2 url&amp;lt;-&amp;#39;https://www.thepaper.cn&amp;#39; web&amp;lt;-read_html(url,encoding=&amp;quot;utf-8&amp;quot;) title&amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;div.news_li h2&amp;quot;) %&amp;gt;% html_text() write.csv(title,file=&amp;quot;title-of-news&amp;quot;)   文档展示   </description>
+    </item>
+    
+    <item>
+      <title>Strange</title>
+      <link>/2019/05/25/strange/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/25/strange/</guid>
+      <description> 发现了一个奇怪的包 如果你心情不好 或者你很无聊 可以下载这个比你更加无聊的包 它什么都不会，但是它会不停的赞美你
+Maybe That’s enough.
+library(praise) praise::praise() ## [1] &amp;quot;You are breathtaking!&amp;quot; praise::praise() ## [1] &amp;quot;You are super!&amp;quot; praise::praise() ## [1] &amp;quot;You are flawless!&amp;quot; praise::praise() ## [1] &amp;quot;You are sublime!&amp;quot; praise::praise() ## [1] &amp;quot;You are outstanding!&amp;quot; praise::praise() ## [1] &amp;quot;You are rad!&amp;quot; </description>
+    </item>
     
     <item>
       <title>20190515爬虫练习</title>
@@ -147,12 +168,12 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     </item>
     
     <item>
-      <title>Lorem Ipsum</title>
-      <link>/2015/01/01/lorem-ipsum/</link>
+      <title>Hello my blog!</title>
+      <link>/2015/01/01/hello-my-blog/</link>
       <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
       
-      <guid>/2015/01/01/lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+      <guid>/2015/01/01/hello-my-blog/</guid>
+      <description>Today is my first day of blogging！</description>
     </item>
     
   </channel>
