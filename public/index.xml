@@ -17,7 +17,8 @@
       <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/25/20190525practice/</guid>
-      <description> 爬取澎湃新闻 目标 获取澎湃新闻精选列表中的所有标题,并生成文件 ### 网址 https://www.thepaper.cn
+      <description> 爬取澎湃新闻 目标 获取澎湃新闻精选列表中的所有标题,并生成文件
+ 网址 https://www.thepaper.cn
  过程如下 library(rvest) ## 载入需要的程辑包：xml2 ## Registered S3 method overwritten by &amp;#39;rvest&amp;#39;: ## method from ## read_xml.response xml2 url&amp;lt;-&amp;#39;https://www.thepaper.cn&amp;#39; web&amp;lt;-read_html(url,encoding=&amp;quot;utf-8&amp;quot;) title&amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;div.news_li h2&amp;quot;) %&amp;gt;% html_text() write.csv(title,file=&amp;quot;title-of-news&amp;quot;)   文档展示   </description>
     </item>
     
