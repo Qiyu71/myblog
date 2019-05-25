@@ -1,0 +1,26 @@
+---
+title: 20190525爬虫练习2
+author: Qiyu
+date: '2019-05-25'
+slug: 20190525practice
+categories: []
+tags: []
+---
+# 爬取澎湃新闻
+
+### 目标：获取澎湃新闻精选列表中的所有标题,并生成文件
+### 网址：https://www.thepaper.cn
+### 过程如下：
+```{r scrape}
+library(rvest)
+url<-'https://www.thepaper.cn'
+web<-read_html(url,encoding="utf-8")
+title<-web %>% html_nodes("div.news_li h2") %>% html_text()
+write.csv(title,file="title-of-news") 
+```
+### 文档展示
+![](/Users/qiyu/Desktop/1.png)
+
+![](/Users/qiyu/Desktop/2.png)
+
+![](/Users/qiyu/Desktop/3.png)
