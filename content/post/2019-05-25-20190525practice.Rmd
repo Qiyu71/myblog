@@ -12,6 +12,7 @@ tags: []
 获取澎湃新闻精选列表中的所有标题,并生成文件
 ### 网址
 https://www.thepaper.cn
+
 ### 过程如下
 ```{r scrape}
 library(rvest)
