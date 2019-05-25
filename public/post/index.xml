@@ -27,9 +27,13 @@
       <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/25/strange/</guid>
-      <description> 发现了一个奇怪的包 如果你心情不好 或者你很无聊 可以下载这个比你更加无聊的包 它什么都不会，但是它会不停的赞美你
-Maybe That’s enough.
-library(praise) praise::praise() ## [1] &amp;quot;You are breathtaking!&amp;quot; praise::praise() ## [1] &amp;quot;You are super!&amp;quot; praise::praise() ## [1] &amp;quot;You are flawless!&amp;quot; praise::praise() ## [1] &amp;quot;You are sublime!&amp;quot; praise::praise() ## [1] &amp;quot;You are outstanding!&amp;quot; praise::praise() ## [1] &amp;quot;You are rad!&amp;quot; </description>
+      <description> 发现了一个奇怪的包
+如果你心情不好
+或者你很无聊
+可以下载这个比你更加无聊的包
+它什么都不会，但是它会不停的赞美你。
+But maybe that’s enough.
+library(praise) praise::praise() ## [1] &amp;quot;You are ultimate!&amp;quot; praise::praise() ## [1] &amp;quot;You are geometric!&amp;quot; praise::praise() ## [1] &amp;quot;You are divine!&amp;quot; praise::praise() ## [1] &amp;quot;You are super!&amp;quot; praise::praise() ## [1] &amp;quot;You are posh!&amp;quot; praise::praise() ## [1] &amp;quot;You are polished!&amp;quot; </description>
     </item>
     
     <item>
