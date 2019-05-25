@@ -1,0 +1,26 @@
+---
+title: Strange
+author: Qiyu
+date: '2019-05-25'
+slug: strange
+categories: []
+tags: []
+---
+发现了一个奇怪的包
+如果你心情不好
+或者你很无聊
+可以下载这个比你更加无聊的包
+它什么都不会，但是会不停的赞美你
+Maybe
+That's enough.
+
+```{r}
+library(praise)
+praise::praise()
+praise::praise()
+praise::praise()
+praise::praise()
+praise::praise()
+praise::praise()
+```
+
