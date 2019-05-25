@@ -21,7 +21,8 @@ title<-web %>% html_nodes("div.news_li h2") %>% html_text()
 write.csv(title,file="title-of-news") 
 ```
 ### 文档展示
+![](https://img.alicdn.com/imgextra/i4/3383487940/O1CN01W0dxeS28WZIIcOKQY_!!3383487940.png)
 
+![](https://img.alicdn.com/imgextra/i3/3383487940/O1CN01xwgr4628WZIFsCK1R_!!3383487940.png)
 
-
-
+![](https://img.alicdn.com/imgextra/i4/3383487940/O1CN01RCwfMm28WZIHH4vvB_!!3383487940.png)
