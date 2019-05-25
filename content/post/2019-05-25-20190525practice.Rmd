@@ -8,9 +8,11 @@ tags: []
 ---
 # 爬取澎湃新闻
 
-### 目标：获取澎湃新闻精选列表中的所有标题,并生成文件
-### 网址：https://www.thepaper.cn
-### 过程如下：
+### 目标
+获取澎湃新闻精选列表中的所有标题,并生成文件
+### 网址
+https://www.thepaper.cn
+### 过程如下
 ```{r scrape}
 library(rvest)
 url<-'https://www.thepaper.cn'
