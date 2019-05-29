@@ -6,10 +6,22 @@
     <description>Recent content in Posts on QiYu’s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>plot</title>
+      <link>/2019/05/26/plot/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/26/plot/</guid>
+      <description> plot实践（一） 举一个很草率的例子来作图：
+这是一道低级数学题：编织一块面积为5平方米的矩形地毯，地毯的长x（米）与宽y（米）之间的函数关系式为y=5/x，其中x∈[1,20]
+x&amp;lt;-1:20 y&amp;lt;-5/x plot(x,y) 这个图看起来有点丑并且包含信息较少，加一些别的元素拯救一下下。
+x&amp;lt;-1:20 y&amp;lt;-5/x plot(x,y,main = &amp;quot;y=5/x&amp;quot;,type = &amp;quot;b&amp;quot;,pch =18,col =&amp;quot;steelblue&amp;quot;,fg =&amp;quot;grey33&amp;quot;,xlab = &amp;quot;length&amp;quot;,ylab = &amp;quot;width&amp;quot;) text(2.5,2,&amp;quot;Better choice&amp;quot;,col = &amp;quot;orangered4&amp;quot;)  plot实践（二） 折线图：未来10天的成都天气（含今天） temperature&amp;lt;-c(19,17,26,29,29,30,31,32,33,29) #因为数据很少，所以手动输入 x&amp;lt;-c(1:10) plot(x,temperature,type=&amp;quot;o&amp;quot;) #这是一个折线图 plot(x,temperature,type=&amp;quot;o&amp;quot;,col =&amp;quot;steelblue&amp;quot;,fg =&amp;quot;grey33&amp;quot;,xlab = &amp;quot;day&amp;quot;,pch =18) plot(x,temperature,type=&amp;quot;o&amp;quot;,col =&amp;quot;steelblue&amp;quot;,fg =&amp;quot;grey33&amp;quot;,xlab = &amp;quot;day&amp;quot;,pch =18,main = &amp;quot;The weather for the next 10 days in chengdu&amp;quot;) axis(1,1:10) text(x,temperature,temperature,col = &amp;quot;tan2&amp;quot;)   </description>
+    </item>
     
     <item>
       <title>20190525爬虫练习2</title>

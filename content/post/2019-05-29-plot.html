@@ -1,0 +1,42 @@
+---
+title: plot
+author: Qiyu
+date: '2019-05-26'
+slug: plot
+categories: []
+tags: []
+---
+
+
+
+<div id="plot" class="section level2">
+<h2>plot实践（一）</h2>
+<p>举一个很草率的例子来作图：</p>
+<p>这是一道低级数学题：编织一块面积为5平方米的矩形地毯，地毯的长x（米）与宽y（米）之间的函数关系式为y=5/x，其中x∈[1,20]</p>
+<pre class="r"><code>x&lt;-1:20
+y&lt;-5/x
+plot(x,y)</code></pre>
+<p><img src="/post/2019-05-29-plot_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>这个图看起来有点丑并且包含信息较少，加一些别的元素拯救一下下。</p>
+<pre class="r"><code>x&lt;-1:20
+y&lt;-5/x
+plot(x,y,main = &quot;y=5/x&quot;,type = &quot;b&quot;,pch =18,col =&quot;steelblue&quot;,fg =&quot;grey33&quot;,xlab = &quot;length&quot;,ylab = &quot;width&quot;)
+text(2.5,2,&quot;Better choice&quot;,col = &quot;orangered4&quot;)</code></pre>
+<p><img src="/post/2019-05-29-plot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="plot" class="section level2">
+<h2>plot实践（二）</h2>
+<div id="10" class="section level3">
+<h3>折线图：未来10天的成都天气（含今天）</h3>
+<pre class="r"><code>temperature&lt;-c(19,17,26,29,29,30,31,32,33,29) #因为数据很少，所以手动输入
+x&lt;-c(1:10)
+plot(x,temperature,type=&quot;o&quot;) #这是一个折线图</code></pre>
+<p><img src="/post/2019-05-29-plot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>plot(x,temperature,type=&quot;o&quot;,col =&quot;steelblue&quot;,fg =&quot;grey33&quot;,xlab = &quot;day&quot;,pch =18)</code></pre>
+<p><img src="/post/2019-05-29-plot_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<pre class="r"><code>plot(x,temperature,type=&quot;o&quot;,col =&quot;steelblue&quot;,fg =&quot;grey33&quot;,xlab = &quot;day&quot;,pch =18,main = &quot;The weather for the next 10 days in chengdu&quot;)
+axis(1,1:10)
+text(x,temperature,temperature,col = &quot;tan2&quot;)</code></pre>
+<p><img src="/post/2019-05-29-plot_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
+</div>
+</div>

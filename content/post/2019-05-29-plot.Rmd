@@ -1,0 +1,38 @@
+---
+title: plot
+author: Qiyu
+date: '2019-05-26'
+slug: plot
+categories: []
+tags: []
+---
+## plot实践（一）
+举一个很草率的例子来作图：
+
+这是一道低级数学题：编织一块面积为5平方米的矩形地毯，地毯的长x（米）与宽y（米）之间的函数关系式为y=5/x，其中x∈[1,20]
+```{r}
+x<-1:20
+y<-5/x
+plot(x,y)
+```
+
+这个图看起来有点丑并且包含信息较少，加一些别的元素拯救一下下。
+```{r}
+x<-1:20
+y<-5/x
+plot(x,y,main = "y=5/x",type = "b",pch =18,col ="steelblue",fg ="grey33",xlab = "length",ylab = "width")
+text(2.5,2,"Better choice",col = "orangered4")
+```
+
+## plot实践（二）
+### 折线图：未来10天的成都天气（含今天）
+```{r}
+temperature<-c(19,17,26,29,29,30,31,32,33,29) #因为数据很少，所以手动输入
+x<-c(1:10)
+plot(x,temperature,type="o") #这是一个折线图
+plot(x,temperature,type="o",col ="steelblue",fg ="grey33",xlab = "day",pch =18)
+plot(x,temperature,type="o",col ="steelblue",fg ="grey33",xlab = "day",pch =18,main = "The weather for the next 10 days in chengdu")
+axis(1,1:10)
+text(x,temperature,temperature,col = "tan2")
+```
+
