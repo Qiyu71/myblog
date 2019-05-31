@@ -1,0 +1,172 @@
+---
+title: calculate
+author: Qiyu
+date: '2019-05-15'
+slug: calculate
+categories: []
+tags: []
+---
+
+
+
+<p>R有计算器的功能，今天就围绕R的基本运算展开，对各种计算方式进行尝试和练习。</p>
+<p>主要包括：四则运算、数字计算、比较计算、逻辑计算、数组计算、排列组合计算、累积计算、两个数组计算</p>
+<ul>
+<li><strong>四则运算</strong>：</li>
+</ul>
+<p>加减乘除，以及余数、整除、绝对值、判断正负之类的。</p>
+<pre class="r"><code>a&lt;-21;b&lt;-8
+#加减乘除
+a+b;a-b;a*b;a/b</code></pre>
+<pre><code>## [1] 29</code></pre>
+<pre><code>## [1] 13</code></pre>
+<pre><code>## [1] 168</code></pre>
+<pre><code>## [1] 2.625</code></pre>
+<pre class="r"><code>#余数.整除
+a%%b;a%/%b</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>#绝对值
+abs(b)</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>abs(-a)</code></pre>
+<pre><code>## [1] 21</code></pre>
+<pre class="r"><code>#判断正负,-1表示是负数，1代表是正数，0代表0
+sign(-2:4)</code></pre>
+<pre><code>## [1] -1 -1  0  1  1  1  1</code></pre>
+<ul>
+<li><strong>数学计算</strong>：</li>
+</ul>
+<p>幂，自然常用e的幂，平方根，对数</p>
+<pre class="r"><code>a&lt;-9;b&lt;-4;c&lt;-7
+#幂
+a^b;a^-b;c^(c/7)</code></pre>
+<pre><code>## [1] 6561</code></pre>
+<pre><code>## [1] 0.0001524158</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>#自然常数e
+exp(1)</code></pre>
+<pre><code>## [1] 2.718282</code></pre>
+<pre class="r"><code>exp(4)</code></pre>
+<pre><code>## [1] 54.59815</code></pre>
+<pre class="r"><code>#平方根
+sqrt(b)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>#以2为底的对数
+log2(b)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>#自定义底的对数
+log(b,base=2) #以2为底的对数</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>#指数对数操作
+log(a^b,base = a)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>log(exp(3))</code></pre>
+<pre><code>## [1] 3</code></pre>
+<ul>
+<li><strong>比较计算</strong>：==,&lt;,&gt;,!=,&lt;=,&gt;=,isTRUE,identical</li>
+</ul>
+<pre class="r"><code>a&lt;-10;b&lt;-5
+#判断是否为TRUE（这个其实没太懂是什么意思）
+isTRUE(a);isTRUE(!a)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>#精确比较两个对象
+identical(1,as.integer(1))</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>identical(NaN, -NaN)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<ul>
+<li><strong>逻辑运算</strong></li>
+</ul>
+<p>&amp;/|：与/或；&amp;&amp;, ||, xor（这个有不明白的地方，之后再看一看）</p>
+<pre class="r"><code>x&lt;-c(0,1,0,1)
+y&lt;-c(0,0,1,1)
+#只比较第一个元素 &amp;&amp;, ||
+x &amp;&amp; y;x || y</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>x &amp; y;x | y</code></pre>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE</code></pre>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE</code></pre>
+<pre class="r"><code>#异或
+xor(x,y);xor(x,!y)</code></pre>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE</code></pre>
+<pre><code>## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+<ul>
+<li><p><strong>约数计算</strong></p>
+<p>这个很简单，就只把一些函数列在这里：【向上取整】ceiling()；【向下取整】floor();【取整数】trunc();【四舍五入】round();【四舍五入】round(数字，保留多少位小数)；【四舍五入，保留前2为整数】signif()</p></li>
+<li><p><strong>数组计算</strong></p></li>
+</ul>
+<pre class="r"><code>d&lt;-seq(1,10,2);d #从1-10，隔2个单位取一个数</code></pre>
+<pre><code>## [1] 1 3 5 7 9</code></pre>
+<pre class="r"><code>#求最大值，最小值，范围range
+max(d);min(d);range(d)</code></pre>
+<pre><code>## [1] 9</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 1 9</code></pre>
+<pre class="r"><code>#求和，均值,中位数
+sum(d)</code></pre>
+<pre><code>## [1] 25</code></pre>
+<pre class="r"><code>mean(d)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>median(d)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>#加权平均
+weighted.mean(d,rep(1,5))</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>#连乘
+prod(1:5)</code></pre>
+<pre><code>## [1] 120</code></pre>
+<ul>
+<li><strong>排列组合计算</strong>：阶乘、组合、排列</li>
+</ul>
+<pre class="r"><code>#5！的阶乘
+factorial(6)</code></pre>
+<pre><code>## [1] 720</code></pre>
+<pre class="r"><code>#列出从5个中选出3个的组合所有项
+combn(5,3)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,]    1    1    1    1    1    1    2    2    2     3
+## [2,]    2    2    2    3    3    4    3    3    4     4
+## [3,]    3    4    5    4    5    5    4    5    5     5</code></pre>
+<ul>
+<li><strong>累积计算</strong></li>
+</ul>
+<pre class="r"><code>#累加
+cumsum(1:5)</code></pre>
+<pre><code>## [1]  1  3  6 10 15</code></pre>
+<pre class="r"><code>#累乘
+cumprod(1:5)</code></pre>
+<pre><code>## [1]   1   2   6  24 120</code></pre>
+<ul>
+<li>两个数组计算：交集，并集，差集，数组是否相等，取唯一，查匹配元素的索引，找重复元素索引</li>
+</ul>
+<pre class="r"><code>x&lt;-c(9:20,1:5,3:7,0:8);x</code></pre>
+<pre><code>##  [1]  9 10 11 12 13 14 15 16 17 18 19 20  1  2  3  4  5  3  4  5  6  7  0
+## [24]  1  2  3  4  5  6  7  8</code></pre>
+<pre class="r"><code>y&lt;-1:10;y</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>#交集
+intersect(x,y)</code></pre>
+<pre><code>##  [1]  9 10  1  2  3  4  5  6  7  8</code></pre>
+<pre class="r"><code>#并集
+union(x,y)</code></pre>
+<pre><code>##  [1]  9 10 11 12 13 14 15 16 17 18 19 20  1  2  3  4  5  6  7  0  8</code></pre>
+<pre class="r"><code>#差集，从x中排除y
+setdiff(x,y)</code></pre>
+<pre><code>##  [1] 11 12 13 14 15 16 17 18 19 20  0</code></pre>
+<pre class="r"><code>#判断是否相等
+setequal(x, y)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>#取唯一
+unique(c(x,y))</code></pre>
+<pre><code>##  [1]  9 10 11 12 13 14 15 16 17 18 19 20  1  2  3  4  5  6  7  0  8</code></pre>
+<pre class="r"><code>#找到x在y中存在的元素的索引
+which(x %in% y)</code></pre>
+<pre><code>##  [1]  1  2 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30 31</code></pre>
+<pre class="r"><code>which(is.element(x,y))</code></pre>
+<pre><code>##  [1]  1  2 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30 31</code></pre>
+<pre class="r"><code>#找到重复元素的索引
+which(duplicated(x))</code></pre>
+<pre><code>##  [1] 18 19 20 24 25 26 27 28 29 30</code></pre>
