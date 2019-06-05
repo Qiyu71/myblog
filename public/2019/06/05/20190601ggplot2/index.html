@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>ggplot2--第一次练习 - QiYu’s Blog</title>
+<meta property="og:title" content="ggplot2--第一次练习 - QiYu’s Blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/0CCFD597BFD09B6CCF69FE89AA167218.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/contact/">Contact</a></li>
+    
+    <li><a href="https://weibo.com/u/3597652082?nick=%e5%a4%8f%e4%b8%8d%e6%83%9f%e6%a0%8e">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">ggplot2--第一次练习</h1>
+
+    
+    <span class="article-date">2019-06-05</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div class="section level2">
+<h2>👧今天的学习任务如下：</h2>
+<div class="section level3">
+<h3><strong><em>基本任务：</em></strong></h3>
+<p>大致对ggplot2有一定的了解。</p>
+</div>
+<div class="section level3">
+<h3><strong><em>重点学习：</em></strong></h3>
+<ul>
+<li>关于<strong>分组作图</strong>的内容。</li>
+<li>参数在aes内和外的区别</li>
+<li>使用color与fill</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2>一、初步认识</h2>
+<p>ggplot2和plot都是作图包，但是ggplot2更加优秀。</p>
+<p>（1）它作出的图比plot美观</p>
+<p>（2）比plot更有逻辑</p>
+<div id="ggplot2" class="section level3">
+<h3>ggplot2的理念</h3>
+<ul>
+<li>核心理念是：将绘图与数据分离（逻辑很清晰）</li>
+<li>有命令式作图的调整函数，可以随时更换参数来调整图形，更具灵活性
+&gt; 来源于一个还不错的教程</li>
+</ul>
+</div>
+<div id="ggplot2" class="section level3">
+<h3>ggplot2的逻辑</h3>
+<ul>
+<li>ggplot2是按图层叠加作图的，通过+号叠加，越到后面图层越高</li>
+<li><p>ggplot2作图符合人的认知，有明确的起点和终点，由ggplot开始作图，可以在后面的任一叠加函数停止作图</p>
+<p>So，一个<strong>具有诚意的、良心的</strong>ggplot2的作图应该是这样子的：ggplot(data,aes(x,y))+geom_xx()+annotate()+labs()+facet_grid()+…不断添加函数，丰富内容，labs标题，facet_grid()封面</p></li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2>作图类型</h2>
+<p>有很多种类型的图表可供选择，比如：散点图、线图、柱状图、直方图、密度图、箱线图等等等等</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>#这里就举一个例子：密度图
+ggplot(mtcars,aes(mpg))+geom_density()</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div class="section level2">
+<h2>重点一：分类作图❗️❗️</h2>
+<p>这里要用到：factor</p>
+<pre class="r"><code> #选择分类变量为vs
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="a-question" class="section level3">
+<h3>A question!!</h3>
+<p>理想状态下，我们选择的变量是分类变量，但是存在一个<strong>疑惑</strong>:如果是<strong>连续型的变量</strong>如何处理？如何体现在图表上？</p>
+<p>【此处省略艰难地搜索寻找答案的过程】</p>
+<p>根据查到的一些资料和视频，得到了相对科学的解决方法👇</p>
+<p>比如使用渐变色标尺</p>
+<pre class="r"><code>#解析：wt作为x轴，mpg作为y轴，color-qsec作为染色依据，即分类原则，而qsec是一个连续型的数值变量，只能用渐变色标尺一一对应向量顺序
+
+ggplot(mtcars,aes(wt,mpg,color=qsec))+geom_point() </code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+</div>
+<div id="-aes" class="section level2">
+<h2>重点二 参数在aes内和外的区别</h2>
+<p>直接试一试，看看差别</p>
+<pre class="r"><code>#这是最初始的样子
+ggplot(mtcars,aes(wt,mpg))+geom_point()</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>#这是参数在外的情况，可以看到所有的点都变成了蓝色
+ggplot(mtcars,aes(wt,mpg))+geom_point(color=&quot;blue&quot;)</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<pre class="r"><code>#这是参数在内的情况，发现并没有使点变成蓝色，而是变成了浅粉色，具体原因应该使蓝色作为变量，失去了本身的意义。
+ggplot(mtcars,aes(wt,mpg,color=&quot;blue&quot;))+geom_point()</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-4-3.png" width="672" />
+所以什么时候写在里面，什么时候写在外面？</p>
+<ul>
+<li>如果想要统一颜色，就写在外面</li>
+<li><p>如果想要用来分组，就写在里面</p>
+<p>【END 今日份学习任务完成✅】</p></li>
+</ul>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

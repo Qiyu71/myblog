@@ -6,10 +6,30 @@
     <description>Recent content on QiYu’s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ggplot2--第一次练习</title>
+      <link>/2019/06/05/20190601ggplot2/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/05/20190601ggplot2/</guid>
+      <description>👧今天的学习任务如下： 基本任务： 大致对ggplot2有一定的了解。
+ 重点学习：  关于分组作图的内容。 参数在aes内和外的区别 使用color与fill    一、初步认识 ggplot2和plot都是作图包，但是ggplot2更加优秀。
+（1）它作出的图比plot美观
+（2）比plot更有逻辑
+ggplot2的理念  核心理念是：将绘图与数据分离（逻辑很清晰） 有命令式作图的调整函数，可以随时更换参数来调整图形，更具灵活性 &amp;gt; 来源于一个还不错的教程   ggplot2的逻辑  ggplot2是按图层叠加作图的，通过+号叠加，越到后面图层越高 ggplot2作图符合人的认知，有明确的起点和终点，由ggplot开始作图，可以在后面的任一叠加函数停止作图
+So，一个具有诚意的、良心的ggplot2的作图应该是这样子的：ggplot(data,aes(x,y))+geom_xx()+annotate()+labs()+facet_grid()+…不断添加函数，丰富内容，labs标题，facet_grid()封面
+    作图类型 有很多种类型的图表可供选择，比如：散点图、线图、柱状图、直方图、密度图、箱线图等等等等
+library(ggplot2) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;: ## method from ## [.quosures rlang ## c.quosures rlang ## print.quosures rlang #这里就举一个例子：密度图 ggplot(mtcars,aes(mpg))+geom_density()  重点一：分类作图❗️❗️ 这里要用到：factor
+ #选择分类变量为vs ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point() A question!! 理想状态下，我们选择的变量是分类变量，但是存在一个疑惑:如果是连续型的变量如何处理？如何体现在图表上？
+【此处省略艰难地搜索寻找答案的过程】
+根据查到的一些资料和视频，得到了相对科学的解决方法👇
+比如使用渐变色标尺</description>
+    </item>
     
     <item>
       <title>ggplot2--调整图片元素的练习</title>
