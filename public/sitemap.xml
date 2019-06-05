@@ -4,24 +4,24 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/2019/06/05/20190601ggplot2/</loc>
-    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/2019/06/03/0602ggplot2/</loc>
     <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/06/01/20190601ggplot2/</loc>
+    <lastmod>2019-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
