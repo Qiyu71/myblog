@@ -76,6 +76,7 @@ ggplot(mtcars,aes(wt,mpg))+geom_point(color="blue")
 #这是参数在内的情况，发现并没有使点变成蓝色，而是变成了浅粉色，具体原因应该使蓝色作为变量，失去了本身的意义。
 ggplot(mtcars,aes(wt,mpg,color="blue"))+geom_point()
 ```
+
 所以什么时候写在里面，什么时候写在外面？
 
 - 如果想要统一颜色，就写在外面
