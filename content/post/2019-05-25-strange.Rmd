@@ -1,5 +1,5 @@
 ---
-title: Strange
+title: A Strange Package
 author: Qiyu
 date: '2019-05-25'
 slug: strange
