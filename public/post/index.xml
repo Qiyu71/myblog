@@ -33,10 +33,10 @@ library(ggplot2) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#3
     
     <item>
       <title>ggplot2--调整图片元素的练习</title>
-      <link>/2019/06/02/0602ggplot2/</link>
-      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      <link>/2019/06/03/0602ggplot2/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/02/0602ggplot2/</guid>
+      <guid>/2019/06/03/0602ggplot2/</guid>
       <description>👇这是今天的学习成果 选取的数据还是mtcars
 调整形状 shape=x,x=1,2,3…,不同的数字代表不同的形状，需要时可以自己上网搜索;size=x,x=1,2,3…，数值越大，尺寸越大.
 library(ggplot2) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;: ## method from ## [.quosures rlang ## c.quosures rlang ## print.quosures rlang #先练习一下上次学的分组作图！分组变量的使用！ ggplot(mtcars,aes(wt,mpg))+geom_point() ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point() ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=1) ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2) ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2,size=3)  改变颜色 color是描绘点、线、以及图形边缘的颜色；fill是填充图形内部的颜色（比如柱形图、密度图之类的都适合用）

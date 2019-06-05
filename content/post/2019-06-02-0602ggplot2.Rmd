@@ -1,7 +1,7 @@
 ---
 title: ggplot2--调整图片元素的练习
 author: Qiyu
-date: '2019-06-02'
+date: '2019-06-03'
 slug: 0602ggplot2
 categories: []
 tags: []
