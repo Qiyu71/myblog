@@ -6,10 +6,28 @@
     <description>Recent content on QiYu’s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ggplot2--调整图片元素的练习</title>
+      <link>/2019/06/02/0602ggplot2/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/02/0602ggplot2/</guid>
+      <description>👇这是今天的学习成果 选取的数据还是mtcars
+调整形状 shape=x,x=1,2,3…,不同的数字代表不同的形状，需要时可以自己上网搜索;size=x,x=1,2,3…，数值越大，尺寸越大.
+library(ggplot2) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;: ## method from ## [.quosures rlang ## c.quosures rlang ## print.quosures rlang #先练习一下上次学的分组作图！分组变量的使用！ ggplot(mtcars,aes(wt,mpg))+geom_point() ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point() ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=1) ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2) ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2,size=3)  改变颜色 color是描绘点、线、以及图形边缘的颜色；fill是填充图形内部的颜色（比如柱形图、密度图之类的都适合用）
+colours() 可以查看所有的颜色
+目前我发现了一个比较好看的颜色：yellowgreen！！！喜欢！
+ 文字注释 annotate(“text”,x=,y=,label=&amp;quot;&amp;quot;)，text表示添加的类型，x=,y=指定位置，label表示填写的文本内容。
+#假如想在wt=4,mpg=20的位置加入文本： ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point() #只需要继续添加图层就可以了 ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate(&amp;quot;text&amp;quot;,x=4,y=20,label=&amp;quot;hhh&amp;quot;)  标题 labs(title=&amp;quot; “,x=” “,y=” &amp;quot;)
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate(&amp;quot;text&amp;quot;,x=4,y=20,label=&amp;quot;hhh&amp;quot;)+labs(title=&amp;quot;halo&amp;quot;,x=&amp;quot;x轴&amp;quot;,y=&amp;quot;y轴&amp;quot;) #不知道怎么回事，中文竟然显示不出来，变成了小方格。  添加线条 添加竖线 geom_vline(xintercept=)
+添加水平线 geom_hline(yintercept=)
+#这里使用我喜欢的颜色哈哈～ ggplot(mtcars,aes(wt,mpg))+geom_point(color=&amp;quot;yellowgreen&amp;quot;) ggplot(mtcars,aes(wt,mpg))+geom_point(color=&amp;quot;yellowgreen&amp;quot;)+annotate(&amp;quot;text&amp;quot;,x=4,y=20,label=&amp;quot;hhh&amp;quot;)+labs(title=&amp;quot;halo&amp;quot;,x=&amp;quot;xxx&amp;quot;,y=&amp;quot;yyy&amp;quot;) #添加竖线👇 ggplot(mtcars,aes(wt,mpg))+geom_point(color=&amp;quot;yellowgreen&amp;quot;)+annotate(&amp;quot;text&amp;quot;,x=4,y=20,label=&amp;quot;hhh&amp;quot;)+labs(title=&amp;quot;halo&amp;quot;,x=&amp;quot;xxx&amp;quot;,y=&amp;quot;yyy&amp;quot;)+ geom_vline(xintercept=3) #再加一个水平线👇 ggplot(mtcars,aes(wt,mpg))+geom_point(color=&amp;quot;yellowgreen&amp;quot;)+annotate(&amp;quot;text&amp;quot;,x=4,y=20,label=&amp;quot;hhh&amp;quot;)+labs(title=&amp;quot;halo&amp;quot;,x=&amp;quot;xxx&amp;quot;,y=&amp;quot;yyy&amp;quot;)+ geom_vline(xintercept=3)+ geom_hline(yintercept=20)  转换x轴和y轴 coord_filp( )</description>
+    </item>
     
     <item>
       <title>plot</title>

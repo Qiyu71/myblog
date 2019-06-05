@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>ggplot2--调整图片元素的练习 - QiYu’s Blog</title>
+<meta property="og:title" content="ggplot2--调整图片元素的练习 - QiYu’s Blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/0CCFD597BFD09B6CCF69FE89AA167218.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/contact/">Contact</a></li>
+    
+    <li><a href="https://weibo.com/u/3597652082?nick=%e5%a4%8f%e4%b8%8d%e6%83%9f%e6%a0%8e">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">ggplot2--调整图片元素的练习</h1>
+
+    
+    <span class="article-date">2019-06-02</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div class="section level1">
+<h1>👇这是今天的学习成果</h1>
+<p>选取的数据还是mtcars</p>
+<div class="section level2">
+<h2>调整形状</h2>
+<p>shape=x,x=1,2,3…,不同的数字代表不同的形状，需要时可以自己上网搜索;size=x,x=1,2,3…，数值越大，尺寸越大.</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>#先练习一下上次学的分组作图！分组变量的使用！
+ggplot(mtcars,aes(wt,mpg))+geom_point()</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=1)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-1-4.png" width="672" /></p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2,size=3)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-1-5.png" width="672" /></p>
+</div>
+<div class="section level2">
+<h2>改变颜色</h2>
+<p>color是描绘点、线、以及图形边缘的颜色；fill是填充图形内部的颜色（比如柱形图、密度图之类的都适合用）</p>
+<p>colours() 可以查看所有的颜色</p>
+<p>目前我发现了一个比较好看的颜色：yellowgreen！！！喜欢！</p>
+</div>
+<div class="section level2">
+<h2>文字注释</h2>
+<p>annotate(“text”,x=,y=,label=&quot;&quot;)，text表示添加的类型，x=,y=指定位置，label表示填写的文本内容。</p>
+<pre class="r"><code>#假如想在wt=4,mpg=20的位置加入文本：
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>#只需要继续添加图层就可以了
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate(&quot;text&quot;,x=4,y=20,label=&quot;hhh&quot;)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+</div>
+<div class="section level2">
+<h2>标题</h2>
+<p>labs(title=&quot; “,x=” “,y=” &quot;)</p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate(&quot;text&quot;,x=4,y=20,label=&quot;hhh&quot;)+labs(title=&quot;halo&quot;,x=&quot;x轴&quot;,y=&quot;y轴&quot;)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>#不知道怎么回事，中文竟然显示不出来，变成了小方格。</code></pre>
+</div>
+<div class="section level2">
+<h2>添加线条</h2>
+<p>添加竖线 geom_vline(xintercept=)</p>
+<p>添加水平线 geom_hline(yintercept=)</p>
+<pre class="r"><code>#这里使用我喜欢的颜色哈哈～
+ggplot(mtcars,aes(wt,mpg))+geom_point(color=&quot;yellowgreen&quot;)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg))+geom_point(color=&quot;yellowgreen&quot;)+annotate(&quot;text&quot;,x=4,y=20,label=&quot;hhh&quot;)+labs(title=&quot;halo&quot;,x=&quot;xxx&quot;,y=&quot;yyy&quot;)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<pre class="r"><code>#添加竖线👇
+ggplot(mtcars,aes(wt,mpg))+geom_point(color=&quot;yellowgreen&quot;)+annotate(&quot;text&quot;,x=4,y=20,label=&quot;hhh&quot;)+labs(title=&quot;halo&quot;,x=&quot;xxx&quot;,y=&quot;yyy&quot;)+ geom_vline(xintercept=3)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-4-3.png" width="672" /></p>
+<pre class="r"><code>#再加一个水平线👇
+ggplot(mtcars,aes(wt,mpg))+geom_point(color=&quot;yellowgreen&quot;)+annotate(&quot;text&quot;,x=4,y=20,label=&quot;hhh&quot;)+labs(title=&quot;halo&quot;,x=&quot;xxx&quot;,y=&quot;yyy&quot;)+ geom_vline(xintercept=3)+ geom_hline(yintercept=20)</code></pre>
+<p><img src="/post/2019-06-02-0602ggplot2_files/figure-html/unnamed-chunk-4-4.png" width="672" /></p>
+</div>
+<div id="xy" class="section level2">
+<h2>转换x轴和y轴</h2>
+<p>coord_filp( )</p>
+</div>
+<div class="section level2">
+<h2>调整轴刻度范围</h2>
+<p>x轴刻度范围：xlim(下限，上限)</p>
+<p>y轴刻度范围：ylim(下限，上限)</p>
+</div>
+<div class="section level2">
+<h2>修改轴上的值</h2>
+<p>x轴值：scale_x_continuous(breaks=c(),labels=c())</p>
+<p>y轴值：scale_y_continuous(breaks=c(),labels=c())</p>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

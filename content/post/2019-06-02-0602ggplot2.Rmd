@@ -1,0 +1,81 @@
+---
+title: ggplot2--调整图片元素的练习
+author: Qiyu
+date: '2019-06-02'
+slug: 0602ggplot2
+categories: []
+tags: []
+---
+# 👇这是今天的学习成果
+选取的数据还是mtcars
+
+## 调整形状
+shape=x,x=1,2,3…,不同的数字代表不同的形状，需要时可以自己上网搜索;size=x,x=1,2,3…，数值越大，尺寸越大.
+```{r}
+library(ggplot2)
+#先练习一下上次学的分组作图！分组变量的使用！
+ggplot(mtcars,aes(wt,mpg))+geom_point()
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=1)
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2)
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point(shape=2,size=3)
+```
+
+## 改变颜色
+
+color是描绘点、线、以及图形边缘的颜色；fill是填充图形内部的颜色（比如柱形图、密度图之类的都适合用）
+
+colours() 可以查看所有的颜色
+
+目前我发现了一个比较好看的颜色：yellowgreen！！！喜欢！
+
+## 文字注释
+
+annotate("text",x=,y=,label="")，text表示添加的类型，x=,y=指定位置，label表示填写的文本内容。
+```{r}
+#假如想在wt=4,mpg=20的位置加入文本：
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()
+#只需要继续添加图层就可以了
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate("text",x=4,y=20,label="hhh")
+```
+
+## 标题
+
+labs(title=" ",x=" ",y=" ")
+```{r}
+ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()+annotate("text",x=4,y=20,label="hhh")+labs(title="halo",x="x轴",y="y轴")
+#不知道怎么回事，中文竟然显示不出来，变成了小方格。
+```
+## 添加线条
+添加竖线 geom_vline(xintercept=)
+
+添加水平线 geom_hline(yintercept=)
+```{r}
+#这里使用我喜欢的颜色哈哈～
+ggplot(mtcars,aes(wt,mpg))+geom_point(color="yellowgreen")
+ggplot(mtcars,aes(wt,mpg))+geom_point(color="yellowgreen")+annotate("text",x=4,y=20,label="hhh")+labs(title="halo",x="xxx",y="yyy")
+#添加竖线👇
+ggplot(mtcars,aes(wt,mpg))+geom_point(color="yellowgreen")+annotate("text",x=4,y=20,label="hhh")+labs(title="halo",x="xxx",y="yyy")+ geom_vline(xintercept=3)
+#再加一个水平线👇
+ggplot(mtcars,aes(wt,mpg))+geom_point(color="yellowgreen")+annotate("text",x=4,y=20,label="hhh")+labs(title="halo",x="xxx",y="yyy")+ geom_vline(xintercept=3)+ geom_hline(yintercept=20)
+```
+
+## 转换x轴和y轴
+coord_filp( )
+```{r}
+
+```
+
+## 调整轴刻度范围
+x轴刻度范围：xlim(下限，上限)
+
+y轴刻度范围：ylim(下限，上限)
+
+## 修改轴上的值
+x轴值：scale_x_continuous(breaks=c(),labels=c())
+
+y轴值：scale_y_continuous(breaks=c(),labels=c())
+```{r}
+
+```
+
