@@ -13,7 +13,8 @@ tags: []
 <script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
 
 
-<p>随便练一下👇</p>
+<p>随便练一下👇
+## 练习一</p>
 <pre class="r"><code>library(DiagrammeR)</code></pre>
 <pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
 ##   method         from 
@@ -33,6 +34,22 @@ A-&gt;1;B-&gt;2;B-&gt;3;B-&gt;4;C-&gt;A;E-&gt;B;C-&gt;D;C-&gt;F;F-&gt;5;B-&gt;C
 &quot;)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph boxes_and_circles{\nnode[shape=circle,color=royalblue] \nA;B;C;D;E;F\nnode[shape=box;color=gold1]\n1;2;3;4;5\n#add edge statements\nA->1;B->2;B->3;B->4;C->A;E->B;C->D;C->F;F->5;B->C\n#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的\n}     \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="section level2">
+<h2>练习二</h2>
+<pre class="r"><code>grViz(&quot;digraph fig{
+scu[label=&#39;公共管理学院&#39;, shape=oval]
+A [label=&#39;哲学&#39;, color=dodgerblue4, shape=rectangle]
+B [label=&#39;信息资源管理&#39;, color=dodgerblue4, shape=rectangle]
+C [label=&#39;土地资源管理&#39;, color=dodgerblue4, shape=rectangle]
+D [label=&#39;公共事业管理&#39;, color=dodgerblue4, shape=rectangle]
+E [label=&#39;行政管理&#39;, color=dodgerblue4, shape=rectangle]
+F [label=&#39;劳动与社会保障&#39;, color=dodgerblue4, shape=rectangle]
+G [label=&#39;秘书档案&#39;, color=dodgerblue4, shape=rectangle]
+scu -&gt; {A,B,C,D,E,F,G}
+}&quot;)</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"digraph fig{\nscu[label=\"公共管理学院\", shape=oval]\nA [label=\"哲学\", color=dodgerblue4, shape=rectangle]\nB [label=\"信息资源管理\", color=dodgerblue4, shape=rectangle]\nC [label=\"土地资源管理\", color=dodgerblue4, shape=rectangle]\nD [label=\"公共事业管理\", color=dodgerblue4, shape=rectangle]\nE [label=\"行政管理\", color=dodgerblue4, shape=rectangle]\nF [label=\"劳动与社会保障\", color=dodgerblue4, shape=rectangle]\nG [label=\"秘书档案\", color=dodgerblue4, shape=rectangle]\nscu -> {A,B,C,D,E,F,G}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
 <div class="section level2">
 <h2>6.7 愉快的夜晚</h2>
 <pre class="r"><code>library(DiagrammeR)
@@ -70,8 +87,8 @@ tab2-&gt;tab6
 [12]:&#39;开心快乐满足地睡觉！&#39;
 
 &quot;)</code></pre>
-<div id="htmlwidget-2" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"一切准备就绪：水果、零食\"]\ntab2 [label = \"周五例行活动：《我是唱作人》\"]\ntab3 [label = \"钱正昊\"]\ntab4 [label = \"郝云\"]\ntab5 [label = \"白举纲\"]\ntab6 [label = \"白安\"]\ntab7 [label = \"金志文\"]\ntab8 [label = \"背带裤男孩好甜\"]\ntab9 [label = \"京味儿民谣的大叔好酷\"]\ntab10 [label = \"小白好有少年感\"]\ntab11 [label = \"今日份简单走心\"]\ntab12 [label = \"开心快乐满足地睡觉！\"]\ntab1->tab2->tab3->tab8->tab12\ntab2->tab4->tab9->tab12\ntab2->tab5->tab10->tab12\ntab2->tab7->tab11->tab12\ntab2->tab6\n} ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"一切准备就绪：水果、零食\"]\ntab2 [label = \"周五例行活动：《我是唱作人》\"]\ntab3 [label = \"钱正昊\"]\ntab4 [label = \"郝云\"]\ntab5 [label = \"白举纲\"]\ntab6 [label = \"白安\"]\ntab7 [label = \"金志文\"]\ntab8 [label = \"背带裤男孩好甜\"]\ntab9 [label = \"京味儿民谣的大叔好酷\"]\ntab10 [label = \"小白好有少年感\"]\ntab11 [label = \"今日份简单走心\"]\ntab12 [label = \"开心快乐满足地睡觉！\"]\ntab1->tab2->tab3->tab8->tab12\ntab2->tab4->tab9->tab12\ntab2->tab5->tab10->tab12\ntab2->tab7->tab11->tab12\ntab2->tab6\n} ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level2">
 <h2>明日简略的安排</h2>
@@ -90,6 +107,6 @@ tab1-&gt;tab2-&gt;tab3-&gt;tab4
 [3]:&#39;跑步（如果不下雨）&#39; 
 [4]:&#39;早睡养生&#39; 
 &quot;)</code></pre>
-<div id="htmlwidget-3" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"早早起床\"]\ntab2 [label = \"学习：做我的一大堆作业\"]\ntab3 [label = \"跑步（如果不下雨）\"]\ntab4 [label = \"早睡养生\"]\ntab1->tab2->tab3->tab4\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"早早起床\"]\ntab2 [label = \"学习：做我的一大堆作业\"]\ntab3 [label = \"跑步（如果不下雨）\"]\ntab4 [label = \"早睡养生\"]\ntab1->tab2->tab3->tab4\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>

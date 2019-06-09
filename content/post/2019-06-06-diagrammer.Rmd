@@ -7,6 +7,7 @@ categories: []
 tags: []
 ---
 随便练一下👇
+## 练习一
 ```{r}
 library(DiagrammeR)
 grViz("
@@ -21,6 +22,23 @@ A->1;B->2;B->3;B->4;C->A;E->B;C->D;C->F;F->5;B->C
 }     
 ")
 ```
+
+## 练习二
+```{r}
+grViz("digraph fig{
+scu[label='公共管理学院', shape=oval]
+A [label='哲学', color=dodgerblue4, shape=rectangle]
+B [label='信息资源管理', color=dodgerblue4, shape=rectangle]
+C [label='土地资源管理', color=dodgerblue4, shape=rectangle]
+D [label='公共事业管理', color=dodgerblue4, shape=rectangle]
+E [label='行政管理', color=dodgerblue4, shape=rectangle]
+F [label='劳动与社会保障', color=dodgerblue4, shape=rectangle]
+G [label='秘书档案', color=dodgerblue4, shape=rectangle]
+scu -> {A,B,C,D,E,F,G}
+}")
+```
+
+
 
 ## 6.7 愉快的夜晚
 
