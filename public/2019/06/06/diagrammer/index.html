@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>DiagrammeR - QiYu’s Blog</title>
+<meta property="og:title" content="DiagrammeR - QiYu’s Blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/0CCFD597BFD09B6CCF69FE89AA167218.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/contact/">Contact</a></li>
+    
+    <li><a href="https://weibo.com/u/3597652082?nick=%e5%a4%8f%e4%b8%8d%e6%83%9f%e6%a0%8e">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">DiagrammeR</h1>
+
+    
+    <span class="article-date">2019-06-06</span>
+    
+
+    <div class="article-content">
+      
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<pre class="r"><code>library(DiagrammeR)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>grViz(&quot;
+ 
+digraph boxes_and_circles{
+node[shape=circle,color=royalblue] 
+A;B;C;D;E;F
+node[shape=box;color=gold1]
+1;2;3;4;5
+#add edge statements
+A-&gt;1;B-&gt;2;B-&gt;3;B-&gt;4;C-&gt;A;E-&gt;B;C-&gt;D;C-&gt;F;F-&gt;5;B-&gt;C
+#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的
+}     
+&quot;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\n \ndigraph boxes_and_circles{\nnode[shape=circle,color=royalblue] \nA;B;C;D;E;F\nnode[shape=box;color=gold1]\n1;2;3;4;5\n#add edge statements\nA->1;B->2;B->3;B->4;C->A;E->B;C->D;C->F;F->5;B->C\n#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的\n}     \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

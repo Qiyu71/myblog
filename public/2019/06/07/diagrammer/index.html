@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>DiagrammeR - QiYu’s Blog</title>
+<meta property="og:title" content="DiagrammeR - QiYu’s Blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/0CCFD597BFD09B6CCF69FE89AA167218.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/contact/">Contact</a></li>
+    
+    <li><a href="https://weibo.com/u/3597652082?nick=%e5%a4%8f%e4%b8%8d%e6%83%9f%e6%a0%8e">Weibo</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">DiagrammeR</h1>
+
+    
+    <span class="article-date">2019-06-07</span>
+    
+
+    <div class="article-content">
+      
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<p>随便练一下👇</p>
+<pre class="r"><code>library(DiagrammeR)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>grViz(&quot;
+digraph boxes_and_circles{
+node[shape=circle,color=royalblue] 
+A;B;C;D;E;F
+node[shape=box;color=gold1]
+1;2;3;4;5
+#add edge statements
+A-&gt;1;B-&gt;2;B-&gt;3;B-&gt;4;C-&gt;A;E-&gt;B;C-&gt;D;C-&gt;F;F-&gt;5;B-&gt;C
+#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的
+}     
+&quot;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph boxes_and_circles{\nnode[shape=circle,color=royalblue] \nA;B;C;D;E;F\nnode[shape=box;color=gold1]\n1;2;3;4;5\n#add edge statements\nA->1;B->2;B->3;B->4;C->A;E->B;C->D;C->F;F->5;B->C\n#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的\n}     \n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="section level2">
+<h2>6.7 愉快的夜晚</h2>
+<pre class="r"><code>library(DiagrammeR)
+grViz(&quot;digraph flowchart {
+node[fontname=Helvetica,shape=rectangle]
+tab1 [label = &#39;@@1&#39;]
+tab2 [label = &#39;@@2&#39;]
+tab3 [label = &#39;@@3&#39;]
+tab4 [label = &#39;@@4&#39;]
+tab5 [label = &#39;@@5&#39;]
+tab6 [label = &#39;@@6&#39;]
+tab7 [label = &#39;@@7&#39;]
+tab8 [label = &#39;@@8&#39;]
+tab9 [label = &#39;@@9&#39;]
+tab10 [label = &#39;@@10&#39;]
+tab11 [label = &#39;@@11&#39;]
+tab12 [label = &#39;@@12&#39;]
+tab1-&gt;tab2-&gt;tab3-&gt;tab8-&gt;tab12
+tab2-&gt;tab4-&gt;tab9-&gt;tab12
+tab2-&gt;tab5-&gt;tab10-&gt;tab12
+tab2-&gt;tab7-&gt;tab11-&gt;tab12
+tab2-&gt;tab6
+} 
+[1]:&#39;一切准备就绪：水果、零食&#39;    
+[2]:&#39;周五例行活动：《我是唱作人》&#39; 
+[3]:&#39;钱正昊&#39; 
+[4]:&#39;郝云&#39; 
+[5]:&#39;白举纲&#39;
+[6]:&#39;白安&#39;
+[7]:&#39;金志文&#39;
+[8]:&#39;背带裤男孩好甜&#39;
+[9]:&#39;京味儿民谣的大叔好酷&#39;
+[10]:&#39;小白好有少年感&#39;
+[11]:&#39;今日份简单走心&#39;
+[12]:&#39;开心快乐满足地睡觉！&#39;
+
+&quot;)</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"一切准备就绪：水果、零食\"]\ntab2 [label = \"周五例行活动：《我是唱作人》\"]\ntab3 [label = \"钱正昊\"]\ntab4 [label = \"郝云\"]\ntab5 [label = \"白举纲\"]\ntab6 [label = \"白安\"]\ntab7 [label = \"金志文\"]\ntab8 [label = \"背带裤男孩好甜\"]\ntab9 [label = \"京味儿民谣的大叔好酷\"]\ntab10 [label = \"小白好有少年感\"]\ntab11 [label = \"今日份简单走心\"]\ntab12 [label = \"开心快乐满足地睡觉！\"]\ntab1->tab2->tab3->tab8->tab12\ntab2->tab4->tab9->tab12\ntab2->tab5->tab10->tab12\ntab2->tab7->tab11->tab12\ntab2->tab6\n} ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="section level2">
+<h2>明日简略的安排</h2>
+<pre class="r"><code>library(DiagrammeR)
+grViz(&quot;digraph flowchart {
+node[fontname=Helvetica,shape=rectangle]
+tab1 [label = &#39;@@1&#39;]
+tab2 [label = &#39;@@2&#39;]
+tab3 [label = &#39;@@3&#39;]
+tab4 [label = &#39;@@4&#39;]
+tab1-&gt;tab2-&gt;tab3-&gt;tab4
+}
+
+[1]:&#39;早早起床&#39;    
+[2]:&#39;学习：做我的一大堆作业&#39; 
+[3]:&#39;跑步（如果不下雨）&#39; 
+[4]:&#39;早睡养生&#39; 
+&quot;)</code></pre>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"diagram":"digraph flowchart {\nnode[fontname=Helvetica,shape=rectangle]\ntab1 [label = \"早早起床\"]\ntab2 [label = \"学习：做我的一大堆作业\"]\ntab3 [label = \"跑步（如果不下雨）\"]\ntab4 [label = \"早睡养生\"]\ntab1->tab2->tab3->tab4\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,84 @@
+---
+title: DiagrammeR
+author: Qiyu
+date: '2019-06-07'
+slug: diagrammer
+categories: []
+tags: []
+---
+随便练一下👇
+```{r}
+library(DiagrammeR)
+grViz("
+digraph boxes_and_circles{
+node[shape=circle,color=royalblue] 
+A;B;C;D;E;F
+node[shape=box;color=gold1]
+1;2;3;4;5
+#add edge statements
+A->1;B->2;B->3;B->4;C->A;E->B;C->D;C->F;F->5;B->C
+#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的
+}     
+")
+```
+
+## 6.7 愉快的夜晚
+
+```{r}
+library(DiagrammeR)
+grViz("digraph flowchart {
+node[fontname=Helvetica,shape=rectangle]
+tab1 [label = '@@1']
+tab2 [label = '@@2']
+tab3 [label = '@@3']
+tab4 [label = '@@4']
+tab5 [label = '@@5']
+tab6 [label = '@@6']
+tab7 [label = '@@7']
+tab8 [label = '@@8']
+tab9 [label = '@@9']
+tab10 [label = '@@10']
+tab11 [label = '@@11']
+tab12 [label = '@@12']
+tab1->tab2->tab3->tab8->tab12
+tab2->tab4->tab9->tab12
+tab2->tab5->tab10->tab12
+tab2->tab7->tab11->tab12
+tab2->tab6
+} 
+[1]:'一切准备就绪：水果、零食'    
+[2]:'周五例行活动：《我是唱作人》' 
+[3]:'钱正昊' 
+[4]:'郝云' 
+[5]:'白举纲'
+[6]:'白安'
+[7]:'金志文'
+[8]:'背带裤男孩好甜'
+[9]:'京味儿民谣的大叔好酷'
+[10]:'小白好有少年感'
+[11]:'今日份简单走心'
+[12]:'开心快乐满足地睡觉！'
+
+")
+```
+
+## 明日简略的安排
+```{r}
+library(DiagrammeR)
+grViz("digraph flowchart {
+node[fontname=Helvetica,shape=rectangle]
+tab1 [label = '@@1']
+tab2 [label = '@@2']
+tab3 [label = '@@3']
+tab4 [label = '@@4']
+tab1->tab2->tab3->tab4
+}
+
+[1]:'早早起床'    
+[2]:'学习：做我的一大堆作业' 
+[3]:'跑步（如果不下雨）' 
+[4]:'早睡养生' 
+")
+```
+
+

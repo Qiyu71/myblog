@@ -6,10 +6,20 @@
     <description>Recent content on QiYu’s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DiagrammeR</title>
+      <link>/2019/06/07/diagrammer/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/07/diagrammer/</guid>
+      <description>随便练一下👇
+library(DiagrammeR) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;: ## method from ## [.quosures rlang ## c.quosures rlang ## print.quosures rlang grViz(&amp;quot; digraph boxes_and_circles{ node[shape=circle,color=royalblue] A;B;C;D;E;F node[shape=box;color=gold1] 1;2;3;4;5 #add edge statements A-&amp;gt;1;B-&amp;gt;2;B-&amp;gt;3;B-&amp;gt;4;C-&amp;gt;A;E-&amp;gt;B;C-&amp;gt;D;C-&amp;gt;F;F-&amp;gt;5;B-&amp;gt;C #感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的 } &amp;quot;)  {&#34;x&#34;:{&#34;diagram&#34;:&#34;\ndigraph boxes_and_circles{\nnode[shape=circle,color=royalblue] \nA;B;C;D;E;F\nnode[shape=box;color=gold1]\n1;2;3;4;5\n#add edge statements\nA-1;B-2;B-3;B-4;C-A;E-B;C-D;C-F;F-5;B-C\n#感觉作图的逻辑很清晰，还可以调整细节,比如：penwidth=2.0这个是用来调整线的粗细的；arrowhead=diamond这个是用来调整箭头的形状的\n} \n&#34;,&#34;config&#34;:{&#34;engine&#34;:&#34;dot&#34;,&#34;options&#34;:null}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]} 6.7 愉快的夜晚 library(DiagrammeR) grViz(&amp;quot;digraph flowchart { node[fontname=Helvetica,shape=rectangle] tab1 [label = &amp;#39;@@1&amp;#39;] tab2 [label = &amp;#39;@@2&amp;#39;] tab3 [label = &amp;#39;@@3&amp;#39;] tab4 [label = &amp;#39;@@4&amp;#39;] tab5 [label = &amp;#39;@@5&amp;#39;] tab6 [label = &amp;#39;@@6&amp;#39;] tab7 [label = &amp;#39;@@7&amp;#39;] tab8 [label = &amp;#39;@@8&amp;#39;] tab9 [label = &amp;#39;@@9&amp;#39;] tab10 [label = &amp;#39;@@10&amp;#39;] tab11 [label = &amp;#39;@@11&amp;#39;] tab12 [label = &amp;#39;@@12&amp;#39;] tab1-&amp;gt;tab2-&amp;gt;tab3-&amp;gt;tab8-&amp;gt;tab12 tab2-&amp;gt;tab4-&amp;gt;tab9-&amp;gt;tab12 tab2-&amp;gt;tab5-&amp;gt;tab10-&amp;gt;tab12 tab2-&amp;gt;tab7-&amp;gt;tab11-&amp;gt;tab12 tab2-&amp;gt;tab6 } [1]:&amp;#39;一切准备就绪：水果、零食&amp;#39; [2]:&amp;#39;周五例行活动：《我是唱作人》&amp;#39; [3]:&amp;#39;钱正昊&amp;#39; [4]:&amp;#39;郝云&amp;#39; [5]:&amp;#39;白举纲&amp;#39; [6]:&amp;#39;白安&amp;#39; [7]:&amp;#39;金志文&amp;#39; [8]:&amp;#39;背带裤男孩好甜&amp;#39; [9]:&amp;#39;京味儿民谣的大叔好酷&amp;#39; [10]:&amp;#39;小白好有少年感&amp;#39; [11]:&amp;#39;今日份简单走心&amp;#39; [12]:&amp;#39;开心快乐满足地睡觉！&amp;#39; &amp;quot;)  {&#34;</description>
+    </item>
     
     <item>
       <title>ggplot2--调整图片元素的练习</title>
