@@ -7,6 +7,7 @@ categories: []
 tags: []
 ---
 随便练一下👇
+
 ## 练习一
 ```{r}
 library(DiagrammeR)
@@ -35,7 +36,7 @@ E [label='行政管理', color=dodgerblue4, shape=rectangle]
 F [label='劳动与社会保障', color=dodgerblue4, shape=rectangle]
 G [label='秘书档案', color=dodgerblue4, shape=rectangle]
 scu -> {A,B,C,D,E,F,G}
-}")
+edge [color=grey]}")
 ```
 
 
