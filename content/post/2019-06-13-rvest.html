@@ -1,0 +1,268 @@
+---
+title: 再来爬一爬
+author: Qiyu
+date: '2019-06-12'
+slug: rvest
+categories: []
+tags: []
+---
+
+
+
+<div id="rvestncbi" class="section level2">
+<h2>用rvest爬取ncbi文献列表</h2>
+<p>爬取与Machine leaning相关的信息</p>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;rvest&#39;:
+##   method            from
+##   read_xml.response xml2</code></pre>
+<pre class="r"><code>library(knitr)
+link &lt;- &#39;https://www.ncbi.nlm.nih.gov/pubmed/?term=Machine+learning&#39;
+#要对网站进行解析
+web &lt;- read_html(link)
+title &lt;- web %&gt;% html_nodes(&#39;div.rslt p.title a&#39;) %&gt;%html_text()
+author &lt;- web %&gt;% html_nodes(&#39;div.supp p.desc&#39;) %&gt;%html_text()
+journal &lt;- web %&gt;% html_nodes(&#39;div.supp p.details span&#39;) %&gt;%html_text()
+#只提取标题、作者和期刊名
+dat &lt;- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format=&quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Title
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Journal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Roadmap for Routine Pharmacogenetic Testing in a Psychiatric University Hospital.
+</td>
+<td style="text-align:left;">
+Menke A, Weber H, Deckert J.
+</td>
+<td style="text-align:left;">
+Pharmacopsychiatry
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Development of Machine Learning Algorithms for Prediction of Prolonged Opioid Prescription after Surgery for Lumbar Disc Herniation.
+</td>
+<td style="text-align:left;">
+Karhade AV, Ogink PT, Thio QCBS, Cha TD, Gormley WB, Hershman SH, Smith TR, Mao J, Schoenfeld AJ, Bono CM, Schwab JH.
+</td>
+<td style="text-align:left;">
+Spine J
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Can we predict firms’ innovativeness? The identification of innovation performers in an Italian region through a supervised learning approach.
+</td>
+<td style="text-align:left;">
+Gandin I, Cozza C.
+</td>
+<td style="text-align:left;">
+PLoS One
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Selected Papers from the Workshop on Computational Biology: Joint with the International Joint Conference on Artificial Intelligence and the International Conference on Machine Learning, 2018.
+</td>
+<td style="text-align:left;">
+Diallo AB, Nguifo EM, Dhifli W, Azizi E, Prabhakaran S, Tansey W.
+</td>
+<td style="text-align:left;">
+J Comput Biol
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rapid in-situ analysis of plant emission for disease diagnosis using a portable gas chromatography device.
+</td>
+<td style="text-align:left;">
+Sharma R, Zhou M, Hunter MD, Fan X.
+</td>
+<td style="text-align:left;">
+J Agric Food Chem
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A chemoinformatics approach for the characterization of hybrid nanomaterials: safer and efficient design perspective.
+</td>
+<td style="text-align:left;">
+Mikolajczyk A, Sizochenko N, Mulkiewicz E, Malankowska A, Rasulev B, Puzyn T.
+</td>
+<td style="text-align:left;">
+Nanoscale
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Morphological Deconvolution of Beta-Lactam Polyspecificity in E. coli.
+</td>
+<td style="text-align:left;">
+Godinez WJ, Chan H, Hossain I, Li C, Ranjitkar S, Rasper D, Simmons RL, Zhang X, Feng BY.
+</td>
+<td style="text-align:left;">
+ACS Chem Biol
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Improved peptide-MHC class II interaction prediction through integration of eluted ligand and peptide affinity data.
+</td>
+<td style="text-align:left;">
+Garde C, Ramarathinam SH, Jappe EC, Nielsen M, Kringelum JV, Trolle T, Purcell AW.
+</td>
+<td style="text-align:left;">
+Immunogenetics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Using seasonal landscape models to predict space use and migratory patterns of an arctic ungulate.
+</td>
+<td style="text-align:left;">
+Baltensperger AP, Joly K.
+</td>
+<td style="text-align:left;">
+Mov Ecol
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Machine Learning for Medical Imaging.
+</td>
+<td style="text-align:left;">
+Fu GS, Levin-Schwartz Y, Lin QH, Zhang D.
+</td>
+<td style="text-align:left;">
+J Healthc Eng
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A Novel Memory-Scheduling Strategy for Large Convolutional Neural Network on Memory-Limited Devices.
+</td>
+<td style="text-align:left;">
+Li S, Shen X, Dou Y, Ni S, Xu J, Yang K, Wang Q, Niu X.
+</td>
+<td style="text-align:left;">
+Comput Intell Neurosci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New neural activity patterns emerge with long-term learning.
+</td>
+<td style="text-align:left;">
+Oby ER, Golub MD, Hennig JA, Degenhart AD, Tyler-Kabara EC, Yu BM, Chase SM, Batista AP.
+</td>
+<td style="text-align:left;">
+Proc Natl Acad Sci U S A
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Complementing the power of deep learning with statistical model fusion: Probabilistic forecasting of influenza in Dallas County, Texas, USA.
+</td>
+<td style="text-align:left;">
+Soliman M, Lyubchich V, Gel YR.
+</td>
+<td style="text-align:left;">
+Epidemics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A new fruit fly optimization algorithm enhanced support vector machine for diagnosis of breast cancer based on high-level features.
+</td>
+<td style="text-align:left;">
+Huang H, Feng X, Zhou S, Jiang J, Chen H, Li Y, Li C.
+</td>
+<td style="text-align:left;">
+BMC Bioinformatics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Protein-protein interaction prediction using a hybrid feature representation and a stacked generalization scheme.
+</td>
+<td style="text-align:left;">
+Chen KH, Wang TF, Hu YJ.
+</td>
+<td style="text-align:left;">
+BMC Bioinformatics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Identifying genetic determinants of complex phenotypes from whole genome sequence data.
+</td>
+<td style="text-align:left;">
+Long GS, Hussen M, Dench J, Aris-Brosou S.
+</td>
+<td style="text-align:left;">
+BMC Genomics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scoring amino acid mutation to predict pandemic risk of avian influenza virus.
+</td>
+<td style="text-align:left;">
+Qiang X, Kou Z.
+</td>
+<td style="text-align:left;">
+BMC Bioinformatics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A hybrid gene selection method based on gene scoring strategy and improved particle swarm optimization.
+</td>
+<td style="text-align:left;">
+Han F, Tang D, Sun YW, Cheng Z, Jiang J, Li QW.
+</td>
+<td style="text-align:left;">
+BMC Bioinformatics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+An advanced approach to identify antimicrobial peptides and their function types for penaeus through machine learning strategies.
+</td>
+<td style="text-align:left;">
+Lin Y, Cai Y, Liu J, Lin C, Liu X.
+</td>
+<td style="text-align:left;">
+BMC Bioinformatics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Memristor Neural Network Training with Clock Synchronous Neuromorphic System.
+</td>
+<td style="text-align:left;">
+Jo S, Sun W, Kim B, Kim S, Park J, Shin H.
+</td>
+<td style="text-align:left;">
+Micromachines (Basel)
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>write.table(dat, &#39;disaster_paper.txt&#39;, sep=&quot;&quot;, row.names = F, quote = F)</code></pre>
+</div>

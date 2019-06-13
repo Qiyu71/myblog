@@ -1,0 +1,27 @@
+---
+title: 再来爬一爬
+author: Qiyu
+date: '2019-06-12'
+slug: rvest
+categories: []
+tags: []
+---
+## 用rvest爬取ncbi文献列表
+
+爬取与Machine leaning相关的信息
+```{r}
+library(rvest)
+library(knitr)
+link <- 'https://www.ncbi.nlm.nih.gov/pubmed/?term=Machine+learning'
+#要对网站进行解析
+web <- read_html(link)
+title <- web %>% html_nodes('div.rslt p.title a') %>%html_text()
+author <- web %>% html_nodes('div.supp p.desc') %>%html_text()
+journal <- web %>% html_nodes('div.supp p.details span') %>%html_text()
+#只提取标题、作者和期刊名
+dat <- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format="html")
+write.table(dat, 'disaster_paper.txt', sep="", row.names = F, quote = F)
+```
+
+

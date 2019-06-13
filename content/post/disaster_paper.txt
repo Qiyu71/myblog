@@ -1,0 +1,21 @@
+TitleAuthorJournal
+Roadmap for Routine Pharmacogenetic Testing in a Psychiatric University Hospital.Menke A, Weber H, Deckert J.Pharmacopsychiatry
+Development of Machine Learning Algorithms for Prediction of Prolonged Opioid Prescription after Surgery for Lumbar Disc Herniation.Karhade AV, Ogink PT, Thio QCBS, Cha TD, Gormley WB, Hershman SH, Smith TR, Mao J, Schoenfeld AJ, Bono CM, Schwab JH.Spine J
+Can we predict firms' innovativeness? The identification of innovation performers in an Italian region through a supervised learning approach.Gandin I, Cozza C.PLoS One
+Selected Papers from the Workshop on Computational Biology: Joint with the International Joint Conference on Artificial Intelligence and the International Conference on Machine Learning, 2018.Diallo AB, Nguifo EM, Dhifli W, Azizi E, Prabhakaran S, Tansey W.J Comput Biol
+Rapid in-situ analysis of plant emission for disease diagnosis using a portable gas chromatography device.Sharma R, Zhou M, Hunter MD, Fan X.J Agric Food Chem
+A chemoinformatics approach for the characterization of hybrid nanomaterials: safer and efficient design perspective.Mikolajczyk A, Sizochenko N, Mulkiewicz E, Malankowska A, Rasulev B, Puzyn T.Nanoscale
+Morphological Deconvolution of Beta-Lactam Polyspecificity in E. coli.Godinez WJ, Chan H, Hossain I, Li C, Ranjitkar S, Rasper D, Simmons RL, Zhang X, Feng BY.ACS Chem Biol
+Improved peptide-MHC class II interaction prediction through integration of eluted ligand and peptide affinity data.Garde C, Ramarathinam SH, Jappe EC, Nielsen M, Kringelum JV, Trolle T, Purcell AW.Immunogenetics
+Using seasonal landscape models to predict space use and migratory patterns of an arctic ungulate.Baltensperger AP, Joly K.Mov Ecol
+Machine Learning for Medical Imaging.Fu GS, Levin-Schwartz Y, Lin QH, Zhang D.J Healthc Eng
+A Novel Memory-Scheduling Strategy for Large Convolutional Neural Network on Memory-Limited Devices.Li S, Shen X, Dou Y, Ni S, Xu J, Yang K, Wang Q, Niu X.Comput Intell Neurosci
+New neural activity patterns emerge with long-term learning.Oby ER, Golub MD, Hennig JA, Degenhart AD, Tyler-Kabara EC, Yu BM, Chase SM, Batista AP.Proc Natl Acad Sci U S A
+Complementing the power of deep learning with statistical model fusion: Probabilistic forecasting of influenza in Dallas County, Texas, USA.Soliman M, Lyubchich V, Gel YR.Epidemics
+A new fruit fly optimization algorithm enhanced support vector machine for diagnosis of breast cancer based on high-level features.Huang H, Feng X, Zhou S, Jiang J, Chen H, Li Y, Li C.BMC Bioinformatics
+Protein-protein interaction prediction using a hybrid feature representation and a stacked generalization scheme.Chen KH, Wang TF, Hu YJ.BMC Bioinformatics
+Identifying genetic determinants of complex phenotypes from whole genome sequence data.Long GS, Hussen M, Dench J, Aris-Brosou S.BMC Genomics
+Scoring amino acid mutation to predict pandemic risk of avian influenza virus.Qiang X, Kou Z.BMC Bioinformatics
+A hybrid gene selection method based on gene scoring strategy and improved particle swarm optimization.Han F, Tang D, Sun YW, Cheng Z, Jiang J, Li QW.BMC Bioinformatics
+An advanced approach to identify antimicrobial peptides and their function types for penaeus through machine learning strategies.Lin Y, Cai Y, Liu J, Lin C, Liu X.BMC Bioinformatics
+Memristor Neural Network Training with Clock Synchronous Neuromorphic System.Jo S, Sun W, Kim B, Kim S, Park J, Shin H.Micromachines (Basel)

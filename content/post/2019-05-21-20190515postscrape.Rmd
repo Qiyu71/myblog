@@ -15,7 +15,7 @@ web<-read_html(url,encoding="utf-8")
 position<-web %>% html_nodes("div.pages_content") %>% html_text()
 print(position)
 library(jiebaR)
-engine_s<-worker(stop_word = "/Users/qiyu/Desktop/stopwords.txt")
+engine_s<-worker(stop_word = "/Users/qiyu/Documents/大二/互联网分析与治理/stopwords.txt")
 seg<-segment(position,engine_s)
 f<-freq(seg)
 f<-f[order(f[2],decreasing=TRUE),]
