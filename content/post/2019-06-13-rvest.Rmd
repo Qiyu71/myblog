@@ -21,7 +21,7 @@ journal <- web %>% html_nodes('div.supp p.details span') %>%html_text()
 #只提取标题、作者和期刊名
 dat <- data.frame(Title = title, Author = author, Journal = journal)
 kable(dat, format="html")
-write.table(dat, 'disaster_paper.txt', sep="", row.names = F, quote = F)
+write.table(dat, 'machine learning.txt', sep="", row.names = F, quote = F)
 ```
 
 

@@ -1,0 +1,21 @@
+TitleAuthorJournal
+A multivoxel pattern analysis framework with mutual connectivity analysis investigating changes in resting state connectivity in patients with HIV associated neurocognitve disorder.DSouza AM, Abidin AZ, Schifitto G, Wismüller A.Magn Reson Imaging
+On the impact of Citizen Science-derived data quality on deep learning based classification in marine images.Langenkämper D, Simon-Lledó E, Hosking B, Jones DOB, Nattkemper TW.PLoS One
+Gene Expression Data Based Deep Learning Model for Accurate Prediction of Drug-induced Liver Injury in Advance.Feng C, Chen H, Yuan X, Sun M, Chu K, Liu H, Rui M.J Chem Inf Model
+Fast and accurate decoding of Raman spectra-encoded suspension arrays using deep learning.Chen X, Xie L, He Y, Guan T, Zhou X, Wang B, Feng G, Yu H, Ji Y.Analyst
+Novel Electrotopological Atomic Descriptors for the Prediction of Xenobiotic Cytochrome P450 Reactions.Kaitoh K, Kotera M, Funatsu K.Mol Inform
+Protein Function Prediction: From Traditional Classifier to Deep Learning.Lv Z, Ao C, Zou Q.Proteomics
+Enabling machine learning in X-ray-based procedures via realistic simulation of image formation.Unberath M, Zaech JN, Gao C, Bier B, Goldmann F, Lee SC, Fotouhi J, Taylor R, Armand M, Navab N.Int J Comput Assist Radiol Surg
+Acuity VEP: improved with machine learning.Bach M, Heinrich SP.Doc Ophthalmol
+Machine learning classifiers can predict Gleason pattern 4 prostate cancer with greater accuracy than experienced radiologists.Antonelli M, Johnston EW, Dikaios N, Cheung KK, Sidhu HS, Appayya MB, Giganti F, Simmons LAM, Freeman A, Allen C, Ahmed HU, Atkinson D, Ourselin S, Punwani S.Eur Radiol
+Time-Independent Prediction of Burn Depth using Deep Convolutional Neural Networks.Cirillo MD, Mirdell R, Sjöberg F, Pham TD.J Burn Care Res
+Modeling in-vivo protein-DNA binding by combining multiple-instance learning with a hybrid deep neural network.Zhang Q, Shen Z, Huang DS.Sci Rep
+Mass spectra alignment using virtual lock-masses.Brochu F, Plante PL, Drouin A, Gagnon D, Richard D, Durocher F, Diorio C, Marchand M, Corbeil J, Laviolette F.Sci Rep
+Deep Learning for the Radiographic Detection of Periodontal Bone Loss.Krois J, Ekert T, Meinhold L, Golla T, Kharbot B, Wittemeier A, Dörfer C, Schwendicke F.Sci Rep
+Fast and automatic assessment of fall risk by coupling machine learning algorithms with a depth camera to monitor simple balance tasks.Dubois A, Mouthon A, Sivagnanaselvam RS, Bresciani JP.J Neuroeng Rehabil
+Discriminant analysis and machine learning approach for evaluating and improving the performance of immunohistochemical algorithms for COO classification of DLBCL.Perfecto-Avalos Y, Garcia-Gonzalez A, Hernandez-Reynoso A, Sánchez-Ante G, Ortiz-Hidalgo C, Scott SP, Fuentes-Aguilar RQ, Diaz-Dominguez R, León-Martínez G, Velasco-Vales V, Cárdenas-Escudero MA, Hernández-Hernández JA, Santos A, Borbolla-Escoboza JR, Villela L.J Transl Med
+Machine-learning to stratify diabetic patients using novel cardiac biomarkers and integrative genomics.Hathaway QA, Roth SM, Pinti MV, Sprando DC, Kunovac A, Durr AJ, Cook CC, Fink GK, Cheuvront TB, Grossman JH, Aljahli GA, Taylor AD, Giromini AP, Allen JL, Hollander JM.Cardiovasc Diabetol
+ProteinNet: a standardized data set for machine learning of protein structure.AlQuraishi M.BMC Bioinformatics
+Machine Learning and Veterinary Pathology: Be Not Afraid!La Perle KMD.Vet Pathol
+Machine-Learning-Based Prediction of Treatment Outcomes Using MR Imaging-Derived Quantitative Tumor Information in Patients with Sinonasal Squamous Cell Carcinomas: A Preliminary Study.Fujima N, Shimizu Y, Yoshida D, Kano S, Mizumachi T, Homma A, Yasuda K, Onimaru R, Sakai O, Kudo K, Shirato H.Cancers (Basel)
+Roadmap for Routine Pharmacogenetic Testing in a Psychiatric University Hospital.Menke A, Weber H, Deckert J.Pharmacopsychiatry
