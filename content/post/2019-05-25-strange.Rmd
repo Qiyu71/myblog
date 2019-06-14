@@ -28,3 +28,14 @@ praise::praise()
 praise::praise()
 ```
 
+再来添加一个“油腻”的爱心
+
+```{r}
+a<- rnorm(1e6)
+b<- rnorm(1e6)
+# rnorm()函数产生一系列服从正态分布的随机数。此外，还有其他随机产生方式runif，rgamma：其总体随机数分别符合uniform，gamma分布，而不是正态分布。
+c<- abs(a)+b
+plot(a,c,col=2,main='A happy day!') 
+```
+
+
