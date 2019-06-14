@@ -1,0 +1,57 @@
+---
+title: About Time——我的时间序列函数
+author: Qiyu
+date: '2019-06-05'
+slug: about-time
+categories: []
+tags: []
+---
+
+
+
+<div class="section level2">
+<h2>我的大学时光</h2>
+<div class="section level3">
+<h3>灵魂质问：人是不是越老越觉得时间过得飞快？</h3>
+<p>又到了毕业季，最近朋友圈里超级多的学长学姐都在晒自己的毕业照，突然意识到时间过得真的好快啊，下一学期我就是一个陷入<em>“中年”危机</em> 的大三老人了（陷入惊恐！我明明感觉自己刚刚入学）。</p>
+<p>好像不经意间大家就毕业了呢，所以还是好好珍惜吧，努力把每一天都过得值得纪念。</p>
+<pre class="r"><code>a&lt;- as.Date(&quot;2017-09-08&quot;) #模糊记得我是2017年9月8日来川大报道
+b&lt;- Sys.Date()
+a1&lt;-as.numeric(format(a,&quot;%Y&quot;)) 
+b1&lt;-as.numeric(format(b,&quot;%Y&quot;)) 
+w&lt;-difftime(b,a,units=&quot;weeks&quot;)
+h&lt;-b1-a1 
+
+student&lt;-function(){print(paste(&quot;今天是小齐同学进入大学的第&quot;,b-a,&quot;天&quot;))}
+student()</code></pre>
+<pre><code>## [1] &quot;今天是小齐同学进入大学的第 644 天&quot;</code></pre>
+<pre class="r"><code>week&lt;-function(){print(paste(&quot;现在是小齐同学进入大学的第&quot;,w,&quot;周&quot;))}
+week()</code></pre>
+<pre><code>## [1] &quot;现在是小齐同学进入大学的第 92 周&quot;</code></pre>
+<pre class="r"><code>year&lt;-function(){print(paste(&quot;今天是小齐同学进入大学的第&quot;,h,&quot;年&quot;,&quot;，你的大学时光仅剩&quot;,4-h,&quot;年&quot;))}
+year()</code></pre>
+<pre><code>## [1] &quot;今天是小齐同学进入大学的第 2 年 ，你的大学时光仅剩 2 年&quot;</code></pre>
+</div>
+</div>
+<div id="x" class="section level2">
+<h2>我在世界上的第X天</h2>
+<pre class="r"><code>x&lt;-Sys.Date()
+y&lt;-as.Date(&quot;1999-01-19&quot;)
+print(paste(&quot;今天是你在世界上的第&quot;,difftime(x,y),&quot;天&quot;,&quot;，还有多少愿望想要实现？&quot;))</code></pre>
+<pre><code>## [1] &quot;今天是你在世界上的第 7451 天 ，还有多少愿望想要实现？&quot;</code></pre>
+<pre class="r"><code>birthday&lt;-function(){print(paste(&quot;今天是你在世界上的第&quot;,difftime(x,y),&quot;天&quot;,&quot;，还有多少愿望想要实现？&quot;))}
+birthday()</code></pre>
+<pre><code>## [1] &quot;今天是你在世界上的第 7451 天 ，还有多少愿望想要实现？&quot;</code></pre>
+<pre class="r"><code>#熟悉一下paste的使用
+
+a &lt;- &quot;Hello&quot;
+b &lt;- &#39;How&#39;
+c &lt;- &quot;are&quot;
+d &lt;- &quot;you?&quot;
+print(paste(a,b,c,d))</code></pre>
+<pre><code>## [1] &quot;Hello How are you?&quot;</code></pre>
+<pre class="r"><code>print(paste(a,b,c,d, sep = &quot;-&quot;))</code></pre>
+<pre><code>## [1] &quot;Hello-How-are-you?&quot;</code></pre>
+<pre class="r"><code>print(paste(a,b,c,d, sep = &quot;&quot;, collapse = &quot;&quot;))</code></pre>
+<pre><code>## [1] &quot;HelloHowareyou?&quot;</code></pre>
+</div>

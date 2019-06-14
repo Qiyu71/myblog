@@ -1,0 +1,59 @@
+---
+title: About Time——我的时间序列函数
+author: Qiyu
+date: '2019-06-05'
+slug: about-time
+categories: []
+tags: []
+---
+## 我的大学时光
+
+### 灵魂质问：人是不是越老越觉得时间过得飞快？
+
+又到了毕业季，最近朋友圈里超级多的学长学姐都在晒自己的毕业照，突然意识到时间过得真的好快啊，下一学期我就是一个陷入*“中年”危机* 的大三老人了（陷入惊恐！我明明感觉自己刚刚入学）。
+
+好像不经意间大家就毕业了呢，所以还是好好珍惜吧，努力把每一天都过得值得纪念。
+
+```{r}
+a<- as.Date("2017-09-08") #模糊记得我是2017年9月8日来川大报道
+b<- Sys.Date()
+a1<-as.numeric(format(a,"%Y")) 
+b1<-as.numeric(format(b,"%Y")) 
+w<-difftime(b,a,units="weeks")
+h<-b1-a1 
+
+student<-function(){print(paste("今天是小齐同学进入大学的第",b-a,"天"))}
+student()
+
+week<-function(){print(paste("现在是小齐同学进入大学的第",w,"周"))}
+week()
+
+year<-function(){print(paste("今天是小齐同学进入大学的第",h,"年","，你的大学时光仅剩",4-h,"年"))}
+year()
+```
+
+## 我在世界上的第X天
+
+
+```{r}
+x<-Sys.Date()
+y<-as.Date("1999-01-19")
+print(paste("今天是你在世界上的第",difftime(x,y),"天","，还有多少愿望想要实现？"))
+
+birthday<-function(){print(paste("今天是你在世界上的第",difftime(x,y),"天","，还有多少愿望想要实现？"))}
+birthday()
+
+#熟悉一下paste的使用
+
+a <- "Hello"
+b <- 'How'
+c <- "are"
+d <- "you?"
+print(paste(a,b,c,d))
+
+print(paste(a,b,c,d, sep = "-"))
+
+print(paste(a,b,c,d, sep = "", collapse = ""))
+
+```
+
