@@ -21,11 +21,12 @@ tags: []
 <li>关于<strong>分组作图</strong>的内容。</li>
 <li>参数在aes内和外的区别</li>
 <li>使用color与fill</li>
+<li>分面作图 facet_grid()</li>
 </ul>
 </div>
 </div>
 <div class="section level2">
-<h2>一、初步认识</h2>
+<h2>一、初步认识【课堂&amp;搜索查询&amp;初体验】</h2>
 <p>ggplot2和plot都是作图包，但是ggplot2更加优秀。</p>
 <p>（1）它作出的图比plot美观</p>
 <p>（2）比plot更有逻辑</p>
@@ -45,6 +46,9 @@ tags: []
 <p>So，一个<strong>具有诚意的、良心的</strong>ggplot2的作图应该是这样子的：ggplot(data,aes(x,y))+geom_xx()+annotate()+labs()+facet_grid()+…不断添加函数，丰富内容，labs标题，facet_grid()封面</p></li>
 </ul>
 </div>
+</div>
+<div id="start" class="section level2">
+<h2>二、重点学习任务——start！</h2>
 </div>
 <div class="section level2">
 <h2>作图类型</h2>
@@ -66,9 +70,9 @@ ggplot(mtcars,aes(mpg))+geom_density()</code></pre>
 ggplot(mtcars,aes(wt,mpg,color=factor(vs)))+geom_point()</code></pre>
 <p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <div id="a-question" class="section level3">
-<h3>A question!!</h3>
+<h3>A question !!</h3>
 <p>理想状态下，我们选择的变量是分类变量，但是存在一个<strong>疑惑</strong>:如果是<strong>连续型的变量</strong>如何处理？如何体现在图表上？</p>
-<p>【此处省略艰难地搜索寻找答案的过程】</p>
+<p>【此处省略艰难搜索寻找答案的过程】</p>
 <p>根据查到的一些资料和视频，得到了相对科学的解决方法👇</p>
 <p>比如使用渐变色标尺</p>
 <pre class="r"><code>#解析：wt作为x轴，mpg作为y轴，color-qsec作为染色依据，即分类原则，而qsec是一个连续型的数值变量，只能用渐变色标尺一一对应向量顺序
@@ -92,7 +96,37 @@ ggplot(mtcars,aes(wt,mpg,color=&quot;blue&quot;))+geom_point()</code></pre>
 <p>所以什么时候写在里面，什么时候写在外面？</p>
 <ul>
 <li>如果想要统一颜色，就写在外面</li>
-<li><p>如果想要用来分组，就写在里面</p>
-<p>【END 今日份学习任务完成✅】</p></li>
+<li>如果想要用来分组，就写在里面</li>
 </ul>
+</div>
+<div id="--facet_grid" class="section level2">
+<h2>重点三 分面作图 facet_grid()</h2>
+<ul>
+<li>单变量作图</li>
+</ul>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg))+geom_point()</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code># 一个是纵轴分离，一个是横轴分离，取决于～与vs之间的位置
+ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(vs~.)  </code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+<pre class="r"><code># 以vs为分类变量，vs=0/vs=1
+ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(.~vs)</code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
+<ul>
+<li>双变量作图</li>
+</ul>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(am~vs) </code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code># 图被切成4个面</code></pre>
+<ul>
+<li>轴刻度不一致的情况</li>
+</ul>
+<pre class="r"><code>ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(vs~.,scale=&quot;free_y&quot;) </code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code># 释放纵轴，让纵轴不一样
+ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(.~vs,scale=&quot;free_x&quot;) </code></pre>
+<p><img src="/post/2019-06-05-20190601ggplot2_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<pre class="r"><code># 释放横轴，让横轴不一样，各自独立
+# 也可以只写&quot;free&quot;，它可以自行判断</code></pre>
+<p>【END 今日份学习任务完成✅】</p>
 </div>
