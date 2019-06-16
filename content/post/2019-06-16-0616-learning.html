@@ -1,0 +1,18 @@
+---
+title: simple map
+author: Qiyu
+date: '2019-06-16'
+slug: 0616-learning
+categories: []
+tags: []
+---
+
+
+
+<pre class="r"><code>library(maps)
+library(mapdata)
+map(&quot;china&quot;)</code></pre>
+<p><img src="/post/2019-06-16-0616-learning_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>map(&quot;china&quot;, col = &quot;red4&quot;, ylim = c(18, 54), panel.first = grid())</code></pre>
+<p><img src="/post/2019-06-16-0616-learning_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code># 👆这个很不好的地方是没有把四川和重庆分开。</code></pre>

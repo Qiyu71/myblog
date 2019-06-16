@@ -1,5 +1,5 @@
 ---
-title: ggplot2--第一次练习
+title: ggplot2——第一次练习
 author: Qiyu
 date: '2019-06-01'
 slug: 20190601ggplot2
@@ -19,17 +19,14 @@ tags: []
 
 
 ## 一、初步认识【课堂&搜索查询&初体验】
-ggplot2和plot都是作图包，但是ggplot2更加优秀。
+ggplot2 is a powerful and a flexible R package, implemented by Hadley Wickham, for producing elegant graphics.
 
-（1）它作出的图比plot美观
-
-（2）比plot更有逻辑
+The concept behind ggplot2 divides plot into three different fundamental parts: Plot = data + Aesthetics + Geometry.
 
 ### ggplot2的理念
 - 核心理念是：将绘图与数据分离（逻辑很清晰）
 - 有命令式作图的调整函数，可以随时更换参数来调整图形，更具灵活性
-> 来源于一个还不错的教程
-
+  
 ### ggplot2的逻辑
 - ggplot2是按图层叠加作图的，通过+号叠加，越到后面图层越高
 - ggplot2作图符合人的认知，有明确的起点和终点，由ggplot开始作图，可以在后面的任一叠加函数停止作图
@@ -119,6 +116,11 @@ ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(.~vs,scale="free_x")
   【END 今日份学习任务完成✅】
 
 
+来源：
+
+https://ggplot2.tidyverse.org
+https://r4ds.had.co.nz/data-visualisation.html
+https://www.jianshu.com/p/f187ebdb2d16
 
 
 

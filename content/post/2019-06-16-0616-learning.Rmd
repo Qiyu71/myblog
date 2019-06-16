@@ -1,0 +1,18 @@
+---
+title: simple map
+author: Qiyu
+date: '2019-06-16'
+slug: 0616-learning
+categories: []
+tags: []
+---
+
+```{r}
+library(maps)
+library(mapdata)
+map("china")
+map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
+# 👆这个很不好的地方是没有把四川和重庆分开。
+```
+
+

@@ -1,7 +1,7 @@
 ---
 title: A Strange Package
 author: Qiyu
-date: '2019-05-25'
+date: '2019-05-17'
 slug: strange
 categories: []
 tags: []
@@ -10,7 +10,7 @@ tags: []
 
 如果你心情不好
 
-或者你很无聊
+或者你很无聊 
 
 可以下载这个比你更加无聊的包
 

@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.55.5" />
 
 
-<title>ggplot2--第一次练习 - QiYu’s Blog</title>
-<meta property="og:title" content="ggplot2--第一次练习 - QiYu’s Blog">
+<title>ggplot2——第一次练习 - QiYu’s Blog</title>
+<meta property="og:title" content="ggplot2——第一次练习 - QiYu’s Blog">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -65,7 +65,7 @@
     <span class="article-duration">1 min read</span>
     
 
-    <h1 class="article-title">ggplot2--第一次练习</h1>
+    <h1 class="article-title">ggplot2——第一次练习</h1>
 
     
     <span class="article-date">2019-06-01</span>
@@ -93,15 +93,13 @@
 </div>
 <div class="section level2">
 <h2>一、初步认识【课堂&amp;搜索查询&amp;初体验】</h2>
-<p>ggplot2和plot都是作图包，但是ggplot2更加优秀。</p>
-<p>（1）它作出的图比plot美观</p>
-<p>（2）比plot更有逻辑</p>
+<p>ggplot2 is a powerful and a flexible R package, implemented by Hadley Wickham, for producing elegant graphics.</p>
+<p>The concept behind ggplot2 divides plot into three different fundamental parts: Plot = data + Aesthetics + Geometry.</p>
 <div id="ggplot2" class="section level3">
 <h3>ggplot2的理念</h3>
 <ul>
 <li>核心理念是：将绘图与数据分离（逻辑很清晰）</li>
-<li>有命令式作图的调整函数，可以随时更换参数来调整图形，更具灵活性
-&gt; 来源于一个还不错的教程</li>
+<li>有命令式作图的调整函数，可以随时更换参数来调整图形，更具灵活性</li>
 </ul>
 </div>
 <div id="ggplot2" class="section level3">
@@ -195,6 +193,10 @@ ggplot(mtcars,aes(wt,mpg))+geom_point()+facet_grid(.~vs,scale=&quot;free_x&quot;
 <pre class="r"><code># 释放横轴，让横轴不一样，各自独立
 # 也可以只写&quot;free&quot;，它可以自行判断</code></pre>
 <p>【END 今日份学习任务完成✅】</p>
+<p>来源：</p>
+<p><a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a>
+<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>
+<a href="https://www.jianshu.com/p/f187ebdb2d16" class="uri">https://www.jianshu.com/p/f187ebdb2d16</a></p>
 </div>
 
     </div>

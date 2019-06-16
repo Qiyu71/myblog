@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.55.5" />
 
 
-<title>爬虫练习——澎湃新闻 - QiYu’s Blog</title>
-<meta property="og:title" content="爬虫练习——澎湃新闻 - QiYu’s Blog">
+<title>A Strange Package - QiYu’s Blog</title>
+<meta property="og:title" content="A Strange Package - QiYu’s Blog">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -65,45 +65,42 @@
     <span class="article-duration">1 min read</span>
     
 
-    <h1 class="article-title">爬虫练习——澎湃新闻</h1>
+    <h1 class="article-title">A Strange Package</h1>
 
     
-    <span class="article-date">2019-05-25</span>
+    <span class="article-date">2019-05-17</span>
     
 
     <div class="article-content">
       
 
 
-<div class="section level1">
-<h1>爬取澎湃新闻</h1>
-<div class="section level3">
-<h3>目标</h3>
-<p>获取澎湃新闻精选列表中的所有标题,并生成文件</p>
-</div>
-<div class="section level3">
-<h3>网址</h3>
-<p><a href="https://www.thepaper.cn" class="uri">https://www.thepaper.cn</a></p>
-</div>
-<div class="section level3">
-<h3>过程如下</h3>
-<pre class="r"><code>library(rvest)</code></pre>
-<pre><code>## 载入需要的程辑包：xml2</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;rvest&#39;:
-##   method            from
-##   read_xml.response xml2</code></pre>
-<pre class="r"><code>url&lt;-&#39;https://www.thepaper.cn&#39;
-web&lt;-read_html(url,encoding=&quot;utf-8&quot;)
-title&lt;-web %&gt;% html_nodes(&quot;div.news_li h2&quot;) %&gt;% html_text()
-write.csv(title,file=&quot;title-of-news&quot;) </code></pre>
-</div>
-<div class="section level3">
-<h3>文档展示</h3>
-<p><img src="https://img.alicdn.com/imgextra/i3/3383487940/O1CN01iBpPjC28WZIHTeu01_!!3383487940.png" /></p>
-<p><img src="https://img.alicdn.com/imgextra/i4/3383487940/O1CN01e4fWVc28WZIGMyU0f_!!3383487940.png" /></p>
-<p><img src="https://img.alicdn.com/imgextra/i4/3383487940/O1CN01oL5dIV28WZIHULznn_!!3383487940.png" /></p>
-</div>
-</div>
+<p>发现了一个奇怪的包</p>
+<p>如果你心情不好</p>
+<p>或者你很无聊</p>
+<p>可以下载这个比你更加无聊的包</p>
+<p>它什么都不会，但是它会不停的赞美你。</p>
+<p>But maybe that’s enough.</p>
+<pre class="r"><code>library(praise)
+praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are delightful!&quot;</code></pre>
+<pre class="r"><code>praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are astonishing!&quot;</code></pre>
+<pre class="r"><code>praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are supreme!&quot;</code></pre>
+<pre class="r"><code>praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are prime!&quot;</code></pre>
+<pre class="r"><code>praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are funkadelic!&quot;</code></pre>
+<pre class="r"><code>praise::praise()</code></pre>
+<pre><code>## [1] &quot;You are mind-blowing!&quot;</code></pre>
+<p>再来添加一个“油腻”的爱心</p>
+<pre class="r"><code>a&lt;- rnorm(1e6)
+b&lt;- rnorm(1e6)
+# rnorm()函数产生一系列服从正态分布的随机数。此外，还有其他随机产生方式runif，rgamma：其总体随机数分别符合uniform，gamma分布，而不是正态分布。
+c&lt;- abs(a)+b
+plot(a,c,col=2,main=&#39;A happy day!&#39;) </code></pre>
+<p><img src="/post/2019-05-25-strange_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 
     </div>
   </article>
