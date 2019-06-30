@@ -17,7 +17,8 @@
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/16/0616-learning/</guid>
-      <description> library(maps) library(mapdata) map(&amp;quot;china&amp;quot;) map(&amp;quot;china&amp;quot;, col = &amp;quot;red4&amp;quot;, ylim = c(18, 54), panel.first = grid()) # 👆这个很不好的地方是没有把四川和重庆分开。 </description>
+      <description>绘制中国地图—— map 实践一 library(maps) library(mapdata) map(&amp;quot;china&amp;quot;) map(&amp;quot;china&amp;quot;, col = &amp;quot;red4&amp;quot;, ylim = c(18, 54), panel.first = grid()) # 👆这个很不好的地方是没有把四川和重庆分开。  实践二—— ggplot2 从world.cities中选出中国地图的数据，并绘制散点图。
+China&amp;lt;- subset(world.cities, country.etc == &amp;quot;China&amp;quot;) library(ggplot2) ## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;: ## method from ## [.quosures rlang ## c.quosures rlang ## print.quosures rlang ggplot(China, aes(long, lat)) +geom_point(colour = alpha(&amp;quot;black&amp;quot;, 1)) ## 为散点图田家城市名称 ggplot(China, aes(long, lat)) +geom_text(aes(label = name), data =China,size =3, angle = 0) ## 用borders函数添加边界。 summary(China) ## name country.</description>
     </item>
     
     <item>

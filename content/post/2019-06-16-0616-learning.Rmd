@@ -6,7 +6,9 @@ slug: 0616-learning
 categories: []
 tags: []
 ---
+## 绘制中国地图—— map
 
+### 实践一
 ```{r}
 library(maps)
 library(mapdata)
@@ -15,4 +17,31 @@ map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
 # 👆这个很不好的地方是没有把四川和重庆分开。
 ```
 
+### 实践二—— ggplot2
+
+从world.cities中选出中国地图的数据，并绘制散点图。
+
+```{r}
+China<- subset(world.cities, country.etc == "China")
+library(ggplot2)
+ggplot(China, aes(long, lat)) +geom_point(colour = alpha("black", 1))
+
+## 为散点图田家城市名称
+ggplot(China, aes(long, lat)) +geom_text(aes(label = name), data =China,size =3, angle = 0)
+
+## 用borders函数添加边界。
+summary(China)
+ggplot(China, aes(long, lat)) +
+borders("world",xlim = c(75.97,132.19), 
+ylim = c(18.23,52.34),size=0.5, colour = "grey20")
+## 按照人口密集度绘制的散点图
+ggplot(China, aes(long, lat)) +
+borders("world",xlim = c(75.97,132.19), 
+ylim = c(18.23,52.34),size=0.5, colour = "grey20")+geom_point(aes(size = pop),colour = "green",alpha=0.05)+
+  scale_size_area() +
+  coord_quickmap()
+
+## 是图层的层层叠加！有点神奇！！ ☺ ︎☺ ︎☺︎
+
+```
 
