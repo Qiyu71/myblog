@@ -122,13 +122,6 @@ summary(China)</code></pre>
 borders(&quot;world&quot;,xlim = c(75.97,132.19), 
 ylim = c(18.23,52.34),size=0.5, colour = &quot;grey20&quot;)</code></pre>
 <p><img src="/post/2019-06-16-0616-learning_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
-<pre class="r"><code>## 按照人口密集度绘制的散点图
-ggplot(China, aes(long, lat)) +
-borders(&quot;world&quot;,xlim = c(75.97,132.19), 
-ylim = c(18.23,52.34),size=0.5, colour = &quot;grey20&quot;)+geom_point(aes(size = pop),colour = &quot;green&quot;,alpha=0.05)+
-  scale_size_area() +
-  coord_quickmap()</code></pre>
-<p><img src="/post/2019-06-16-0616-learning_files/figure-html/unnamed-chunk-2-4.png" width="672" /></p>
 <pre class="r"><code>## 是图层的层层叠加！有点神奇！！ ☺ ︎☺ ︎☺︎</code></pre>
 </div>
 </div>
