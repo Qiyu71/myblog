@@ -34,7 +34,12 @@ summary(China)
 ggplot(China, aes(long, lat)) +
 borders("world",xlim = c(75.97,132.19), 
 ylim = c(18.23,52.34),size=0.5, colour = "grey20")
-
+## 按照人口密集度绘制的散点图
+ggplot(China, aes(long, lat)) +
+borders("world",xlim = c(75.97,132.19), 
+ylim = c(18.23,52.34),size=0.5, colour = "grey20")+geom_point(aes(size = pop),colour = "green",alpha=0.05)+
+  scale_size_area() +
+  coord_quickmap()
 
 ## 是图层的层层叠加！有点神奇！！ ☺ ︎☺ ︎☺︎
 
