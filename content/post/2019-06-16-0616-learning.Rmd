@@ -1,5 +1,5 @@
 ---
-title: simple map
+title: Map of China
 author: Qiyu
 date: '2019-06-16'
 slug: 0616-learning
